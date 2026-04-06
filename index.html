@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopify Listing Assistant | ClawForge Systems</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #151b2f;
+      --soft: #1e2742;
+      --text: #f5f7fb;
+      --muted: #b9c2d6;
+      --accent: #63e6be;
+      --accent2: #74c0fc;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1020 0%, #0f172a 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 24px; }
+    .hero { padding: 64px 0 40px; }
+    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 12px; }
+    h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.05; margin: 14px 0; max-width: 900px; }
+    .sub { color: var(--muted); max-width: 760px; font-size: 1.1rem; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+    .btn {
+      display: inline-block; padding: 14px 20px; border-radius: 12px; text-decoration: none; font-weight: 700;
+      border: 1px solid var(--border);
+    }
+    .btn-primary { background: var(--accent); color: #071017; }
+    .btn-secondary { background: var(--soft); color: var(--text); }
+    .section { padding: 28px 0; }
+    .grid { display: grid; gap: 20px; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      backdrop-filter: blur(6px);
+    }
+    h2 { font-size: 1.8rem; margin-bottom: 12px; }
+    h3 { margin-top: 0; }
+    ul { padding-left: 20px; }
+    .price { font-size: 2rem; font-weight: 800; margin: 10px 0; }
+    .muted { color: var(--muted); }
+    .steps { counter-reset: step; padding-left: 0; list-style: none; }
+    .steps li { margin: 12px 0; padding-left: 44px; position: relative; }
+    .steps li::before {
+      counter-increment: step; content: counter(step);
+      position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 999px;
+      background: var(--accent2); color: #08101b; display: grid; place-items: center; font-weight: 700;
+    }
+    .footer { padding: 40px 0 64px; color: var(--muted); font-size: .95rem; }
+    .faq-item { margin-bottom: 16px; }
+    code.inline { background: rgba(255,255,255,.08); padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">ClawForge Systems</div>
+      <h1>Manage Shopify Product Listings Faster Without Getting Buried In Repetitive Admin</h1>
+      <p class="sub">A beginner-friendly AI workflow for Shopify store owners who want a simpler way to create, update, and check product listings.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://buy.stripe.com/6oUaEX0Gi6dEeTEgbhffy01" target="_blank" rel="noopener">Buy Starter</a>
+        <a class="btn btn-secondary" href="https://buy.stripe.com/00w14n60C59AaDo3ovffy02" target="_blank" rel="noopener">Get Setup Help</a>
+        <a class="btn btn-secondary" href="mailto:kofiadmn@agentmail.to?subject=Custom%20Shopify%20Workflow">Request Custom Workflow</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Problem</h2>
+      <div class="card">
+        <p>Most Shopify store owners waste too much time doing repetitive product admin by hand.</p>
+        <p>Titles, descriptions, prices, product checks, and updates keep pulling attention away from marketing, sales, and growth.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Solution</h2>
+      <div class="card">
+        <h3>Meet Shopify Listing Assistant</h3>
+        <p>Shopify Listing Assistant is a beginner-friendly AI workflow designed to help simplify product listing work.</p>
+        <ul>
+          <li>Create product listings</li>
+          <li>Update existing listings</li>
+          <li>Check product details faster</li>
+          <li>Reduce repetitive admin work</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Who It’s For</h2>
+      <div class="grid grid-3">
+        <div class="card">Shopify beginners</div>
+        <div class="card">Small ecommerce brands</div>
+        <div class="card">Freelancers and VAs</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Choose Your Package</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Starter</h3>
+          <div class="price">$29</div>
+          <p class="muted">Best for beginners who want the basic tool.</p>
+          <ul>
+            <li>Skill file</li>
+            <li>Quick start instructions</li>
+            <li>Command guide</li>
+          </ul>
+          <a class="btn btn-primary" href="https://buy.stripe.com/6oUaEX0Gi6dEeTEgbhffy01" target="_blank" rel="noopener">Buy Starter</a>
+        </div>
+        <div class="card">
+          <h3>Growth Setup</h3>
+          <div class="price">$149</div>
+          <p class="muted">Best for store owners who want setup help.</p>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>Install support</li>
+            <li>Setup guidance</li>
+            <li>One customization</li>
+          </ul>
+          <a class="btn btn-primary" href="https://buy.stripe.com/00w14n60C59AaDo3ovffy02" target="_blank" rel="noopener">Get Setup Help</a>
+        </div>
+        <div class="card">
+          <h3>Pro Workflow</h3>
+          <div class="price">Custom</div>
+          <p class="muted">Best for businesses that want a tailored workflow.</p>
+          <ul>
+            <li>Custom workflow design</li>
+            <li>Implementation guidance</li>
+            <li>Business-specific support</li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:kofiadmn@agentmail.to?subject=Custom%20Shopify%20Workflow">Request Custom Workflow</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How It Works</h2>
+      <div class="card">
+        <ol class="steps">
+          <li>Choose your package</li>
+          <li>Complete payment or request a custom build</li>
+          <li>Receive delivery or onboarding instructions</li>
+          <li>Start using the workflow</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>FAQ</h2>
+      <div class="card">
+        <div class="faq-item"><strong>Do I need to be technical?</strong><br>No. This is designed to be beginner-friendly.</div>
+        <div class="faq-item"><strong>Do I need a Shopify store already?</strong><br>Yes. This is for people already using or preparing to use Shopify.</div>
+        <div class="faq-item"><strong>Is this a digital product or a service?</strong><br>Starter is a digital product. Growth and Pro include service/support.</div>
+        <div class="faq-item"><strong>Can this be customized?</strong><br>Yes. Growth includes one basic customization. Pro is for custom workflow builds.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Ready To Simplify Shopify Product Work?</h2>
+        <p class="muted">Replace the Stripe links in this file, deploy to Vercel, and start selling.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://buy.stripe.com/6oUaEX0Gi6dEeTEgbhffy01" target="_blank" rel="noopener">Buy Starter</a>
+          <a class="btn btn-secondary" href="https://buy.stripe.com/00w14n60C59AaDo3ovffy02" target="_blank" rel="noopener">Get Setup Help</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>ClawForge Systems · AI workflows, automation, and practical business systems.</p>
+      <p>Before going live, replace <code class="inline">REPLACE_STARTER_LINK</code> and <code class="inline">REPLACE_SETUP_LINK</code> with your Stripe payment links.</p>
+    </div>
+  </div>
+</body>
+</html>
