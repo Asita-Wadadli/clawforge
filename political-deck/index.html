@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Claw Forge Political Intelligence | Presentation Deck</title>
+<meta name="description" content="Hosted presentation deck for Claw Forge Political Intelligence — a visual overview of the business, offer structure, value, and next steps." />
+<meta property="og:title" content="Claw Forge Political Intelligence | Presentation Deck" />
+<meta property="og:description" content="A hosted visual presentation explaining what Claw Forge Political Intelligence is, who it helps, and how it works." />
+<meta property="og:image" content="/assets/branding/claw-forge-political-intelligence-logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<style>
+:root{
+  --bg:#05070d;--bg2:#0b1220;--panel:rgba(13,20,34,.76);--line:rgba(255,255,255,.10);--line2:rgba(138,208,255,.22);
+  --text:#f5f8ff;--muted:#b8c4d9;--ice:#dceeff;--blue:#55aeff;--blue2:#9ad7ff;--red:#ff476a;--red2:#ff9aad;--gold:#f2d4a2;
+  --shadow:0 28px 90px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6;background:
+radial-gradient(circle at 14% 8%, rgba(85,174,255,.16), transparent 20%),
+radial-gradient(circle at 86% 10%, rgba(255,71,106,.14), transparent 22%),
+linear-gradient(180deg,#05070d,#0b1220 60%,#0e1726)} a{text-decoration:none;color:inherit} img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:24px}.nav{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:8px 0 22px}.brand{display:flex;gap:14px;align-items:center;font-weight:900}.brand img{width:58px;height:58px;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow)}.brand small{display:block;color:var(--muted);font-weight:600}.navlinks{display:flex;gap:16px;flex-wrap:wrap;align-items:center;color:var(--muted);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:15px;border:1px solid var(--line);font-weight:800;box-shadow:var(--shadow);transition:.2s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:linear-gradient(135deg,var(--red),var(--blue));color:#fff}.btn-secondary{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
+.hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:36px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));box-shadow:var(--shadow);padding:36px}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 16%, rgba(85,174,255,.12), transparent 22%),radial-gradient(circle at 82% 18%, rgba(255,71,106,.10), transparent 24%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}.kicker{display:inline-flex;padding:8px 12px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--ice)}
+h1{font-size:clamp(3rem,5.3vw,5.6rem);line-height:.96;margin:18px 0 14px;max-width:860px}.signal{background:linear-gradient(90deg,#fff,var(--blue2),var(--red2));-webkit-background-clip:text;background-clip:text;color:transparent}.line2{display:block;font-size:.42em;line-height:1.12;color:var(--ice);font-weight:800;margin-top:14px;max-width:14ch}.line3{display:block;font-size:.26em;line-height:1.35;color:var(--muted);font-weight:700;max-width:32ch;margin-top:18px}.sub{font-size:1.08rem;color:var(--muted);max-width:760px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.mini-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.mini-tags span{padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-weight:700;color:var(--gold)}
+.hero-visual{position:relative;min-height:660px;border-radius:30px;overflow:hidden;border:1px solid var(--line);background:
+linear-gradient(180deg,rgba(7,12,24,.98),rgba(9,15,28,.86)),
+url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+background-blend-mode:screen,normal;box-shadow:var(--shadow)}
+.hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,13,.18),rgba(5,7,13,.58));}
+.hero-visual .logo{position:absolute;inset:auto 24px 24px auto;z-index:2;width:140px;opacity:.95;filter:drop-shadow(0 18px 60px rgba(0,0,0,.5))}
+.float,.stat,.panel,.slide-card,.closing{border:1px solid var(--line);background:linear-gradient(180deg,rgba(10,16,29,.75),rgba(10,16,29,.45));box-shadow:var(--shadow)}
+.float{position:absolute;z-index:2;padding:16px 18px;border-radius:18px;min-width:210px;backdrop-filter:blur(10px)} .float .label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue2);font-weight:800}.float strong{display:block;margin-top:4px;color:var(--ice)}.float p{margin:6px 0 0;color:#d8e8fb;font-size:.92rem;line-height:1.4}.f1{left:22px;top:24px}.f2{right:20px;top:110px}.f3{left:24px;bottom:22px}
+.section{padding:42px 0}.section h2{font-size:2.1rem;line-height:1.08;margin:0 0 12px}.copy{color:var(--muted);max-width:880px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.stat{padding:18px;border-radius:20px}.stat strong{display:block;font-size:2rem;color:var(--ice);line-height:1;margin-bottom:8px}
+.deck{display:grid;gap:24px}.slide-card{position:relative;overflow:hidden;border-radius:30px;padding:32px;min-height:540px}.slide-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 12%, rgba(85,174,255,.10), transparent 18%),radial-gradient(circle at 86% 14%, rgba(255,71,106,.08), transparent 18%);pointer-events:none}.slide-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;height:100%}.slide-title{font-size:2.4rem;line-height:1.05;margin:0 0 14px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue2);font-weight:800;margin-bottom:12px}.list{padding-left:18px;margin:0}.list li{margin:8px 0;color:var(--muted)}.visual-box{position:relative;border-radius:26px;min-height:420px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(180deg,rgba(10,16,29,.42),rgba(10,16,29,.72))}
+.visual-photo{background-size:cover;background-position:center}.overlay-card{position:absolute;left:22px;right:22px;bottom:22px;padding:18px;border-radius:18px;background:rgba(7,12,24,.75);backdrop-filter:blur(12px);border:1px solid var(--line)}.overlay-card strong{display:block;color:var(--ice);margin-bottom:6px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.compare .box{padding:18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.compare .box strong{display:block;margin-bottom:10px}
+.path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.path-card{padding:20px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.04)}.path-card strong{display:block;margin-bottom:8px;color:var(--ice)}
+.closing{text-align:center;padding:40px;border-radius:32px;background:linear-gradient(135deg,rgba(255,71,106,.14),rgba(85,174,255,.12))}.footer{text-align:center;color:var(--muted);padding:34px 0 64px}
+@media (max-width:1080px){.hero-grid,.slide-grid,.compare,.path-grid,.stats{grid-template-columns:1fr}} @media (max-width:760px){.wrap{padding:18px}.nav{flex-direction:column;align-items:flex-start}.hero{padding:22px}.hero-visual{min-height:460px}h1{font-size:clamp(2.3rem,10vw,4rem)}.slide-card{padding:22px;min-height:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="nav">
+    <div class="brand">
+      <img src="/assets/branding/claw-forge-political-intelligence-logo.png" alt="Claw Forge Political Intelligence logo" />
+      <div>Claw Forge Political Intelligence<small>Hosted visual presentation deck</small></div>
+    </div>
+    <div class="navlinks">
+      <a href="/political-intelligence/">Main Page</a>
+      <a href="/rapid-response-desk/">Offer</a>
+      <a href="/political-sample-pack/">Sample Pack</a>
+      <a class="btn btn-primary" href="/political-intake/">Start Strategy Intake</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Hosted deck / visual overview</div>
+        <h1><span class="signal">Claw Forge Political Intelligence</span><span class="line2">Rapid Political Communication Systems</span><span class="line3">A presentation-style overview of what the business is, who it helps, what it does, how it works, and why it matters.</span></h1>
+        <p class="sub">Built to feel more like a modern strategic presentation than a basic web page — premium, visual, and easier to send to warm leads, collaborators, media operators, and decision-makers.</p>
+        <div class="mini-tags"><span>Professional</span><span>Photorealistic</span><span>Illustrative</span><span>Pitch-Ready</span></div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/political-intake/">Start Strategy Intake</a>
+          <a class="btn btn-secondary" href="/rapid-response-desk/">View Rapid Response Desk</a>
+          <a class="btn btn-secondary" href="/political-sample-pack/">View Sample Pack</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="float f1"><div class="label">What it is</div><strong>Political communication support</strong><p>Built for public-facing voices, campaigns, civic organizations, and media pressure environments.</p></div>
+        <div class="float f2"><div class="label">What it produces</div><strong>Deployable communication assets</strong><p>Scripts, briefs, analysis, response framing, talking points, and social packs.</p></div>
+        <div class="float f3"><div class="label">Why it matters</div><strong>Speed + discipline</strong><p>Respond faster, stay clearer, and avoid weak communication under pressure.</p></div>
+        <img class="logo" src="/assets/branding/claw-forge-political-intelligence-logo.png" alt="logo" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="stats">
+      <div class="stat"><strong>1</strong><span class="copy">Clear niche political offer</span></div>
+      <div class="stat"><strong>7+</strong><span class="copy">Connected pages in the live funnel</span></div>
+      <div class="stat"><strong>2</strong><span class="copy">Live paid Rapid Response Desk offers</span></div>
+      <div class="stat"><strong>Now</strong><span class="copy">Ready for outreach and sales use</span></div>
+    </div>
+  </section>
+
+  <section class="section deck">
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 1</div>
+          <h2 class="slide-title">What this business is</h2>
+          <p class="copy">Claw Forge Political Intelligence is a political communication and media support operation built to help public-facing voices respond faster, communicate more clearly, and stay more disciplined when political pressure rises.</p>
+          <p class="copy">It exists to turn political events, speeches, controversies, and issue cycles into communication assets that can actually be used.</p>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.25),rgba(7,12,24,.55)),url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Built for real pressure</strong><span class="copy">This is not a vague media concept. It is designed for public-facing communication where timing, clarity, and narrative control matter.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 2</div>
+          <h2 class="slide-title">What we actually do</h2>
+          <div class="compare">
+            <div class="box"><strong>Inputs</strong><ul class="list"><li>Speeches</li><li>Public statements</li><li>Controversies</li><li>Policy issues</li><li>Political pressure moments</li></ul></div>
+            <div class="box"><strong>Outputs</strong><ul class="list"><li>Issue analysis</li><li>Response framing</li><li>Rebuttal points</li><li>Radio-ready scripts</li><li>Social packs and briefs</li></ul></div>
+          </div>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.18),rgba(7,12,24,.56)),url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Transformation focus</strong><span class="copy">We turn political noise into usable communication assets that can be recorded, published, briefed, or deployed.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 3</div>
+          <h2 class="slide-title">Who should use it</h2>
+          <ul class="list">
+            <li>Political commentators</li>
+            <li>Radio hosts</li>
+            <li>Public affairs programs</li>
+            <li>Advocacy groups</li>
+            <li>Civic organizations</li>
+            <li>Campaign teams</li>
+            <li>Public-interest media operations</li>
+            <li>Issue-based public voices</li>
+          </ul>
+          <p class="copy">If your work depends on clear communication under pressure, this is built for you.</p>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.18),rgba(7,12,24,.56)),url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Best fit</strong><span class="copy">The strongest buyers are people and organizations already dealing with public pressure, commentary, issue cycles, or recurring media needs.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 4</div>
+          <h2 class="slide-title">The problem it solves</h2>
+          <ul class="list">
+            <li>Response is too slow</li>
+            <li>Messaging is inconsistent</li>
+            <li>Teams react emotionally instead of strategically</li>
+            <li>There are no ready-to-use communication assets</li>
+            <li>Policy issues are not translated clearly for the public</li>
+            <li>Media opportunities are missed</li>
+          </ul>
+          <p class="copy">The result is confusion, weak rebuttals, wasted time, and lost narrative control.</p>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.20),rgba(7,12,24,.60)),url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Communication failure has a cost</strong><span class="copy">Weak response systems create real losses in trust, clarity, timing, and influence.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 5</div>
+          <h2 class="slide-title">How it works</h2>
+          <ol class="list">
+            <li>A speech, issue, controversy, or political moment appears</li>
+            <li>We analyze the signal: what was said, what matters, and what is weak</li>
+            <li>We shape the response: angle, framing, message discipline, and clarity</li>
+            <li>We build the assets: scripts, briefs, social packs, and talking points</li>
+            <li>The client records, publishes, briefs, or deploys faster</li>
+          </ol>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.18),rgba(7,12,24,.58)),url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Simple path</strong><span class="copy">The system is built to move from issue pressure to deployable communication without unnecessary drag.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 6</div>
+          <h2 class="slide-title">Core offer: Rapid Response Desk</h2>
+          <p class="copy">Rapid Response Desk is the flagship entry offer. It is built for situations where timing matters most.</p>
+          <ul class="list">
+            <li>Speech and statement breakdowns</li>
+            <li>Response framing</li>
+            <li>Rebuttal points</li>
+            <li>Radio-ready scripts</li>
+            <li>Social response packs</li>
+            <li>Short public briefs</li>
+          </ul>
+          <p class="copy">This is the fastest path from issue pressure to disciplined communication output.</p>
+        </div>
+        <div class="visual-box" style="display:grid;place-items:center;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));">
+          <div style="width:min(440px,90%);padding:24px;border-radius:24px;border:1px solid var(--line2);background:linear-gradient(180deg,rgba(85,174,255,.10),rgba(255,255,255,.03));box-shadow:var(--shadow)">
+            <div class="eyebrow">Featured offer</div>
+            <h3 style="margin:0 0 10px;font-size:1.8rem">Rapid Response Desk</h3>
+            <p class="copy">Fast political communication support when timing matters most.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px">
+              <div style="padding:16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)"><strong>Starter</strong><div class="copy">$500/mo</div></div>
+              <div style="padding:16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)"><strong>Standard</strong><div class="copy">$1,250/mo</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 7</div>
+          <h2 class="slide-title">Why it is valuable</h2>
+          <ul class="list">
+            <li>Respond faster</li>
+            <li>Communicate clearer</li>
+            <li>Stay on message</li>
+            <li>Reduce chaos under pressure</li>
+            <li>Create media-ready output</li>
+            <li>Improve public understanding</li>
+            <li>Strengthen communication discipline</li>
+          </ul>
+          <p class="copy">This is not random content production. It is a communication system.</p>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.18),rgba(7,12,24,.58)),url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Operational value</strong><span class="copy">The real gain is not just content. It is cleaner action under pressure.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 8</div>
+          <h2 class="slide-title">Offer structure</h2>
+          <div class="path-grid">
+            <div class="path-card"><strong>Starter</strong><span class="copy">Entry-level monthly support for lighter response needs.</span></div>
+            <div class="path-card" style="border-color:var(--line2);background:rgba(85,174,255,.08)"><strong>Standard</strong><span class="copy">Stronger monthly support for recurring issue pressure and deeper communication needs.</span></div>
+            <div class="path-card"><strong>War Room</strong><span class="copy">Custom support for high-pressure environments needing tailored handling.</span></div>
+          </div>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.18),rgba(7,12,24,.58)),url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Structured ladder</strong><span class="copy">The model supports both direct service and broader recurring communication support.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 9</div>
+          <h2 class="slide-title">What already exists</h2>
+          <ul class="list">
+            <li>Polished landing pages</li>
+            <li>Direct offer page</li>
+            <li>Intake page</li>
+            <li>Examples / proof page</li>
+            <li>Sample deliverables page</li>
+            <li>Sample pack page</li>
+            <li>Onboarding / next-step flow</li>
+            <li>Live payment structure for the first offer</li>
+          </ul>
+          <p class="copy">This is not a vague concept. It is an operating system in build.</p>
+        </div>
+        <div class="visual-box" style="display:grid;place-items:center;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));">
+          <div style="width:min(420px,92%);padding:24px;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.04)">
+            <div class="eyebrow">Live business stack</div>
+            <ul class="list">
+              <li>Political Intelligence</li>
+              <li>Rapid Response Desk</li>
+              <li>Intake</li>
+              <li>Sample Pack</li>
+              <li>Onboarding</li>
+              <li>Stripe payment flow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide-card">
+      <div class="slide-grid">
+        <div>
+          <div class="eyebrow">Slide 10</div>
+          <h2 class="slide-title">Best first step</h2>
+          <div class="path-grid">
+            <div class="path-card"><strong>Need help understanding fit?</strong><span class="copy">Use the intake page.</span></div>
+            <div class="path-card"><strong>Issue already active?</strong><span class="copy">Go directly to Rapid Response Desk.</span></div>
+            <div class="path-card"><strong>Need the broader context?</strong><span class="copy">Review the main Political Intelligence page.</span></div>
+          </div>
+          <p class="copy" style="margin-top:18px">The system is designed to let buyers move at the right level of urgency.</p>
+        </div>
+        <div class="visual-box visual-photo" style="background-image:linear-gradient(180deg,rgba(7,12,24,.18),rgba(7,12,24,.58)),url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80');">
+          <div class="overlay-card"><strong>Decision support</strong><span class="copy">This presentation is meant to shorten understanding time and move the right people toward the right action.</span></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="closing">
+      <div class="eyebrow" style="color:var(--ice)">Closing slide</div>
+      <h2 style="font-size:2.4rem;margin:0 0 12px">If your operation cannot afford weak communication, build the response system.</h2>
+      <p class="copy" style="margin:0 auto 22px;max-width:820px">Claw Forge Political Intelligence exists to help public-facing voices move faster, communicate cleaner, and respond with more discipline when political pressure is real.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary" href="/political-intake/">Start Strategy Intake</a>
+        <a class="btn btn-secondary" href="/rapid-response-desk/">View Rapid Response Desk</a>
+        <a class="btn btn-secondary" href="/political-sample-pack/">View Sample Pack</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p><strong>Claw Forge Political Intelligence</strong> · hosted presentation deck.</p>
+    <p><a href="/political-intelligence/">Main site</a> · <a href="/political-sample-pack/">Sample pack</a> · <a href="/political-intake/">Intake</a></p>
+  </div>
+</div>
+</body>
+</html>
