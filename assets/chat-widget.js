@@ -7,33 +7,34 @@
   // Create widget HTML
   const widgetHTML = `
     <div id="cf-chat-widget" style="position:fixed;bottom:20px;right:20px;z-index:9999;font-family:Inter,Arial,sans-serif;">
-      <!-- Rest State with Greeting -->
-      <div id="cf-chat-rest" style="display:flex;align-items:center;gap:12px;cursor:pointer;transition:all .3s;">
-        <div id="cf-chat-greeting" style="background:#111827;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,.4);opacity:0;transform:translateY(10px);transition:all .3s;">
-          <div style="color:#f0f4f8;font-size:14px;font-weight:600;">Hi. I'm ${BOT_NAME}</div>
-          <div style="color:#94a3b8;font-size:12px;margin-top:4px;">I'll be your assistant. Click here →</div>
+      <!-- Rest State with Greeting - Higher and More Visible -->
+      <div id="cf-chat-rest" style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;cursor:pointer;transition:all .3s;">
+        <div id="cf-chat-greeting" style="background:linear-gradient(135deg,#f87171,#ef4444);border:none;border-radius:16px;padding:16px 20px;box-shadow:0 8px 32px rgba(248,113,113,.4);opacity:0;transform:translateY(20px) scale(0.95);transition:all .4s cubic-bezier(0.34, 1.56, 0.64, 1);max-width:280px;margin-bottom:8px;">
+          <div style="color:white;font-size:15px;font-weight:700;margin-bottom:6px;">👋 Hi! I'm ${BOT_NAME}</div>
+          <div style="color:rgba(255,255,255,.9);font-size:13px;line-height:1.5;">Your Political Intelligence Assistant. Ask me about our services, political communication, or propaganda analysis!</div>
+          <div style="margin-top:10px;padding:8px 14px;background:rgba(255,255,255,.2);border-radius:8px;color:white;font-size:12px;font-weight:600;text-align:center;">Click to chat →</div>
         </div>
-        <div id="cf-chat-button" style="width:56px;height:56px;border-radius:50%;background:#f87171;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .2s;flex-shrink:0;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <div id="cf-chat-button" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#f87171,#ef4444);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(248,113,113,.4);transition:all .3s;flex-shrink:0;border:3px solid rgba(255,255,255,.1);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         </div>
       </div>
       
       <!-- Chat Window -->
-      <div id="cf-chat-window" style="display:none;position:absolute;bottom:70px;right:0;width:360px;height:500px;background:#111827;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);">
-        <div style="background:#0a0f18;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;">
-          <div style="display:flex;align-items:center;gap:10px;">
-            <div style="width:32px;height:32px;border-radius:50%;background:#f87171;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:14px;">C</div>
+      <div id="cf-chat-window" style="display:none;position:absolute;bottom:85px;right:0;width:380px;height:520px;background:#111827;border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.5);">
+        <div style="background:linear-gradient(135deg,#f87171,#ef4444);padding:18px 22px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;font-weight:800;color:#ef4444;font-size:18px;box-shadow:0 2px 8px rgba(0,0,0,.2);">C</div>
             <div>
-              <div style="font-weight:700;color:#f0f4f8;">${BOT_NAME}</div>
-              <div style="font-size:11px;color:#94a3b8;">Political Intelligence Assistant</div>
+              <div style="font-weight:800;color:white;font-size:16px;">${BOT_NAME}</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.85);">Political Intelligence Assistant</div>
             </div>
           </div>
-          <button id="cf-chat-close" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:20px;line-height:1;">×</button>
+          <button id="cf-chat-close" style="background:rgba(255,255,255,.2);border:none;border-radius:50%;width:36px;height:36px;color:white;cursor:pointer;font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;transition:all .2s;">×</button>
         </div>
         <div id="cf-chat-messages" style="height:380px;overflow-y:auto;padding:20px;background:#0a0f18;"></div>
-        <div style="padding:16px 20px;background:#111827;border-top:1px solid rgba(255,255,255,.1);display:flex;gap:8px;">
-          <input id="cf-chat-input" type="text" placeholder="Ask ${BOT_NAME}..." style="flex:1;padding:12px 16px;background:#1f2937;border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#f0f4f8;font-size:14px;outline:none;">
-          <button id="cf-chat-send" style="padding:12px 20px;background:#f87171;border:none;border-radius:10px;color:white;font-weight:600;cursor:pointer;">Send</button>
+        <div style="padding:16px 20px;background:#111827;border-top:1px solid rgba(255,255,255,.1);display:flex;gap:10px;">
+          <input id="cf-chat-input" type="text" placeholder="Ask ${BOT_NAME} anything..." style="flex:1;padding:14px 18px;background:#1f2937;border:1px solid rgba(255,255,255,.1);border-radius:12px;color:#f0f4f8;font-size:14px;outline:none;transition:all .2s;">
+          <button id="cf-chat-send" style="padding:14px 24px;background:linear-gradient(135deg,#f87171,#ef4444);border:none;border-radius:12px;color:white;font-weight:700;cursor:pointer;transition:all .2s;box-shadow:0 4px 12px rgba(248,113,113,.3);">Send</button>
         </div>
       </div>
     </div>
@@ -59,18 +60,18 @@
   if (!hasInteracted) {
     setTimeout(() => {
       greeting.style.opacity = '1';
-      greeting.style.transform = 'translateY(0)';
+      greeting.style.transform = 'translateY(0) scale(1)';
       
       // Show for 6 seconds then minimize
       setTimeout(() => {
-        greeting.style.opacity = '0';
-        greeting.style.transform = 'translateY(10px)';
+        greeting.style.opacity = '0.85';
+        greeting.style.transform = 'translateY(5px) scale(0.98)';
       }, 6000);
-    }, 2000); // Wait 2 seconds after page load
+    }, 1500); // Wait 1.5 seconds after page load
   } else {
     // Show minimized greeting for returning users
-    greeting.style.opacity = '0.7';
-    greeting.style.transform = 'translateY(0)';
+    greeting.style.opacity = '0.85';
+    greeting.style.transform = 'translateY(0) scale(1)';
   }
   
   // Open chat
@@ -80,7 +81,7 @@
     sessionStorage.setItem('channele-interacted', 'true');
     
     if (messages.children.length === 0) {
-      addMessage('assistant', `Hi! I'm ${BOT_NAME}. I can help you learn about Claw Forge Political Intelligence, explain political communication concepts, or answer questions about our services. What would you like to know?`);
+      addMessage('assistant', `Hi! I'm ${BOT_NAME}, your Political Intelligence Assistant. 🎯\n\nI can help you with:\n• Our services (Rapid Response Desk, packages, pricing)\n• Political communication strategy\n• Propaganda analysis and counter-messaging\n• Campaign messaging and positioning\n\nWhat would you like to explore?`);
     }
   }
   
@@ -88,8 +89,8 @@
   function closeChat() {
     window_.style.display = 'none';
     restState.style.display = 'flex';
-    greeting.style.opacity = '0.7';
-    greeting.style.transform = 'translateY(0)';
+    greeting.style.opacity = '0.85';
+    greeting.style.transform = 'translateY(0) scale(1)';
   }
   
   // Event listeners
@@ -101,13 +102,17 @@
   function addMessage(role, text) {
     const div = document.createElement('div');
     div.style.cssText = `margin-bottom:16px;display:flex;${role === 'user' ? 'justify-content:flex-end' : ''}`;
+    
+    // Convert newlines to breaks
+    const formattedText = text.replace(/\n/g, '<br>');
+    
     div.innerHTML = `
-      <div style="max-width:80%;padding:12px 16px;border-radius:12px;font-size:14px;line-height:1.5;${
+      <div style="max-width:85%;padding:14px 18px;border-radius:16px;font-size:14px;line-height:1.6;${
         role === 'user' 
-          ? 'background:#f87171;color:white;border-bottom-right-radius:4px;' 
-          : 'background:#1f2937;color:#f0f4f8;border-bottom-left-radius:4px;'
+          ? 'background:linear-gradient(135deg,#f87171,#ef4444);color:white;border-bottom-right-radius:6px;box-shadow:0 4px 12px rgba(248,113,113,.25);' 
+          : 'background:#1f2937;color:#f0f4f8;border-bottom-left-radius:6px;border:1px solid rgba(255,255,255,.05);'
       }">
-        ${text}
+        ${formattedText}
       </div>
     `;
     messages.appendChild(div);
@@ -126,7 +131,17 @@
     const typing = document.createElement('div');
     typing.id = 'cf-typing';
     typing.style.cssText = 'margin-bottom:16px;';
-    typing.innerHTML = `<div style="padding:12px 16px;background:#1f2937;color:#94a3b8;border-radius:12px;font-size:14px;">${BOT_NAME} is typing...</div>`;
+    typing.innerHTML = `
+      <div style="padding:14px 18px;background:#1f2937;color:#94a3b8;border-radius:16px;font-size:14px;display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.05);">
+        <span style="display:inline-flex;gap:4px;">
+          <span style="width:6px;height:6px;background:#94a3b8;border-radius:50%;animation:cf-bounce 1.4s infinite;"></span>
+          <span style="width:6px;height:6px;background:#94a3b8;border-radius:50%;animation:cf-bounce 1.4s infinite 0.2s;"></span>
+          <span style="width:6px;height:6px;background:#94a3b8;border-radius:50%;animation:cf-bounce 1.4s infinite 0.4s;"></span>
+        </span>
+        ${BOT_NAME} is typing...
+      </div>
+      <style>@keyframes cf-bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-8px)}}</style>
+    `;
     messages.appendChild(typing);
     messages.scrollTop = messages.scrollHeight;
     
@@ -154,4 +169,14 @@
   
   send.addEventListener('click', sendMessage);
   input.addEventListener('keypress', (e) => e.key === 'Enter' && sendMessage());
+  
+  // Button hover effects
+  button.addEventListener('mouseenter', () => {
+    button.style.transform = 'scale(1.1)';
+    button.style.boxShadow = '0 8px 28px rgba(248,113,113,.5)';
+  });
+  button.addEventListener('mouseleave', () => {
+    button.style.transform = 'scale(1)';
+    button.style.boxShadow = '0 6px 20px rgba(248,113,113,.4)';
+  });
 })();
