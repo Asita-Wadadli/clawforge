@@ -4,235 +4,124 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Claw Forge Political Intelligence | Rapid Political Communication Systems</title>
-<meta name="description" content="Rapid political communication systems for campaigns, commentators, civic organizations, and public-interest media. Move from speech breakdown to broadcast-ready response fast." />
+<meta name="description" content="Rapid political communication systems for campaigns, commentators, civic organizations, and public-interest media." />
 <meta property="og:title" content="Claw Forge Political Intelligence" />
 <meta property="og:description" content="Rapid political communication systems for campaigns, commentators, civic organizations, and public-interest media." />
 <meta property="og:image" content="/assets/branding/claw-forge-political-intelligence-logo.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Claw Forge Political Intelligence" />
-<meta name="twitter:description" content="From speech breakdown to broadcast-ready response — fast, disciplined, and built for impact." />
-<meta name="twitter:image" content="/assets/branding/claw-forge-political-intelligence-logo.png" />
 <style>
-:root{
-  --bg:#05070d;--bg2:#0b1220;--bg3:#0f1829;--panel:rgba(13,20,34,.76);--line:rgba(255,255,255,.10);--line2:rgba(138,208,255,.24);
-  --text:#f5f8ff;--muted:#b8c4d9;--ice:#dceeff;--blue:#55aeff;--blue2:#9ad7ff;--red:#ff476a;--red2:#ff9aad;--gold:#f2d4a2;
-  --shadow:0 28px 90px rgba(0,0,0,.45);--radius:24px;--radius-lg:32px;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6;background:
-radial-gradient(circle at 12% 8%, rgba(85,174,255,.16), transparent 20%),
-radial-gradient(circle at 88% 10%, rgba(255,71,106,.14), transparent 22%),
-linear-gradient(180deg,#05070d 0%,#0a1220 46%,#0e1726 100%)}
-a{text-decoration:none;color:inherit} img{display:block;max-width:100%}
-.wrap{max-width:1260px;margin:0 auto;padding:24px}.nav{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:10px 0 22px}.brand{display:flex;gap:14px;align-items:center;font-weight:900}.brand img{width:58px;height:58px;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow)}.brand small{display:block;color:var(--muted);font-weight:600}.navlinks{display:flex;gap:16px;flex-wrap:wrap;align-items:center;color:var(--muted);font-weight:600}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:15px;border:1px solid var(--line);font-weight:800;box-shadow:var(--shadow);transition:.2s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:linear-gradient(135deg,var(--red),var(--blue));color:#fff}.btn-secondary{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
-.hero-shell{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:36px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));box-shadow:var(--shadow);padding:34px}.hero-shell::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 14%, rgba(85,174,255,.12), transparent 20%),radial-gradient(circle at 82% 18%, rgba(255,71,106,.10), transparent 22%)}
-.hero{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:32px;align-items:center}.kicker{display:inline-flex;padding:8px 12px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--ice)}
-h1{font-size:clamp(3rem,5.2vw,5.5rem);line-height:.96;margin:18px 0 14px;max-width:860px}.signal{background:linear-gradient(90deg,#fff,var(--blue2),var(--red2));-webkit-background-clip:text;background-clip:text;color:transparent}.line2{display:block;font-size:.42em;line-height:1.1;color:var(--ice);font-weight:800;margin-top:14px;max-width:15ch}.line3{display:block;font-size:.26em;line-height:1.36;color:var(--muted);font-weight:700;max-width:33ch;margin-top:18px}.sub{font-size:1.08rem;color:var(--muted);max-width:760px}.proof-line{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;color:var(--ice);font-weight:700}.proof-line span{display:inline-flex;align-items:center;gap:8px}.proof-line b{color:#9be7c4}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.micro-reassure{margin-top:12px;color:var(--muted);font-size:.95rem}
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.stat-card,.panel,.service-card,.proof-card,.metric-card,.timeline,.pricing-card,.closing,.showcase-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));box-shadow:var(--shadow)}.stat-card{padding:16px;border-radius:18px}.stat-card strong{display:block;color:var(--ice);margin-bottom:6px}
-.hero-visual{position:relative;min-height:660px;border-radius:30px;overflow:hidden;border:1px solid var(--line);background:
-linear-gradient(180deg,rgba(7,12,24,.28),rgba(7,12,24,.62)),
-url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-box-shadow:var(--shadow)}
-.hero-visual::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,13,.18),rgba(5,7,13,.58))}
-.hero-visual .logo-wrap{position:absolute;inset:auto 24px 24px auto;z-index:2;width:150px;opacity:.96;filter:drop-shadow(0 18px 60px rgba(0,0,0,.5))}
-.floating-card{position:absolute;z-index:2;padding:16px 18px;border-radius:18px;border:1px solid var(--line);background:rgba(8,13,24,.76);min-width:210px;backdrop-filter:blur(10px)}.fc-1{left:22px;top:24px}.fc-2{right:22px;top:110px}.fc-3{left:24px;bottom:22px}.floating-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue2);font-weight:800}.floating-card strong{display:block;margin-top:4px;color:var(--ice)}.floating-card p{margin:6px 0 0;color:#d9e8fb;font-size:.92rem;line-height:1.4}
-.section{padding:40px 0}.section-alt{padding:44px 0}.band-dark{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}.band-blue{position:relative;background:linear-gradient(180deg,rgba(85,174,255,.08),rgba(255,255,255,.01));border-top:1px solid rgba(138,208,255,.12);border-bottom:1px solid rgba(138,208,255,.10)}.band-red{position:relative;background:linear-gradient(180deg,rgba(255,71,106,.07),rgba(255,255,255,.01));border-top:1px solid rgba(255,154,173,.10);border-bottom:1px solid rgba(255,154,173,.08)}.section h2{font-size:2.15rem;line-height:1.08;margin:0 0 12px}.copy,.section-copy{color:var(--muted);max-width:880px}.trust-row{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:stretch}.panel,.service-card,.proof-card,.metric-card,.timeline,.pricing-card,.showcase-card{border-radius:var(--radius);padding:24px}.trust-badges{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.trust-badge{padding:16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);text-align:center;font-weight:800;color:var(--ice)}.grid{display:grid;gap:20px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue2);font-weight:800;margin-bottom:10px}.checks{padding-left:18px;margin:0}.checks li{margin:8px 0;color:var(--muted)}
-.metric-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.metric-card strong{display:block;font-size:2rem;line-height:1;color:var(--ice);margin-bottom:8px}
-.showcase-row{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}.showcase-card{position:relative;overflow:hidden}.showcase-card::after{content:"";position:absolute;inset:auto -60px -60px auto;width:180px;height:180px;background:radial-gradient(circle, rgba(85,174,255,.12), transparent 70%);pointer-events:none}
-.timeline ol{list-style:none;padding:0;margin:0;counter-reset:step}.timeline li{position:relative;padding-left:58px;margin:18px 0}.timeline li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:999px;display:grid;place-items:center;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--red),var(--blue))}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.pricing-card.featured{border-color:rgba(85,174,255,.42);transform:translateY(-8px);background:linear-gradient(180deg,rgba(85,174,255,.12),rgba(255,255,255,.03))}.price{font-size:2.55rem;font-weight:900;margin:8px 0;color:var(--ice)}.price small{font-size:1rem;color:var(--muted);font-weight:700}
-.closing{text-align:center;padding:38px;border-radius:var(--radius-lg);background:linear-gradient(135deg,rgba(255,71,106,.13),rgba(85,174,255,.11))}.footer{text-align:center;color:var(--muted);padding:28px 0 64px}
-@media (max-width:1080px){.hero,.trust-row,.showcase-row,.grid-2,.grid-3,.pricing-grid,.metric-strip,.hero-stats,.trust-badges{grid-template-columns:1fr}.pricing-card.featured{transform:none}} @media (max-width:760px){.wrap{padding:18px}.nav{flex-direction:column;align-items:flex-start}.hero-shell{padding:20px}.hero-visual{min-height:460px}h1{font-size:clamp(2.35rem,10vw,4rem)}}
+:root{--bg:#07101c;--bg2:#0c1726;--panel:#0f1b2d;--panel2:#132338;--line:rgba(255,255,255,.1);--text:#f4f7fb;--muted:#b5c0d1;--blue:#7fc8ff;--blue2:#4ea7ff;--red:#ff5f7d;--gold:#f1d1a7;--shadow:0 24px 80px rgba(0,0,0,.38)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);line-height:1.6;background:linear-gradient(180deg,#07101c 0%,#0b1421 45%,#0d1828 100%)}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.wrap{max-width:1220px;margin:0 auto;padding:24px}.nav{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:10px 0 20px}.brand{display:flex;gap:14px;align-items:center;font-weight:900}.brand img{width:56px;height:56px;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow)}.brand small{display:block;color:var(--muted);font-weight:600}.navlinks{display:flex;flex-wrap:wrap;gap:14px;align-items:center;color:var(--muted);font-weight:600}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:14px;border:1px solid var(--line);font-weight:800;box-shadow:var(--shadow);transition:.2s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:linear-gradient(135deg,var(--red),var(--blue2));color:#fff}.btn-secondary{background:rgba(255,255,255,.04)}
+.hero{padding:26px 0 34px}.hero-shell{display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:center}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;border:1px solid rgba(127,200,255,.25);background:rgba(255,255,255,.03);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}h1{font-size:clamp(3rem,5.5vw,5.6rem);line-height:.96;margin:18px 0 14px;max-width:13ch}.hero p{font-size:1.08rem;color:var(--muted);max-width:690px;margin:0}.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.hero-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}.note{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}.note strong{display:block;margin-bottom:6px;color:var(--text)}
+.hero-visual{position:relative;min-height:620px;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,rgba(7,12,24,.18),rgba(7,12,24,.60)),url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;box-shadow:var(--shadow)}.hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,13,.05),rgba(5,7,13,.5))}.hero-card{position:absolute;left:22px;right:22px;bottom:22px;z-index:2;padding:20px;border-radius:22px;background:rgba(10,17,28,.74);border:1px solid var(--line);backdrop-filter:blur(12px)}.hero-card strong{display:block;font-size:1.15rem;margin-bottom:8px}.hero-logo{position:absolute;right:22px;top:22px;z-index:2;width:88px;opacity:.92}
+.section{padding:50px 0}.band{border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}.band-blue{background:linear-gradient(180deg,rgba(78,167,255,.06),rgba(255,255,255,0))}.band-red{background:linear-gradient(180deg,rgba(255,95,125,.05),rgba(255,255,255,0))}.section h2{font-size:2rem;line-height:1.08;margin:0 0 12px}.copy{max-width:820px;color:var(--muted)}.grid2,.grid3,.metric-grid,.path-grid{display:grid;gap:20px}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}.metric-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.path-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card,.metric,.path{padding:24px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid var(--line);box-shadow:var(--shadow)}.metric strong{display:block;font-size:2rem;line-height:1;color:var(--text);margin-bottom:8px}.card h3,.path h3{margin:0 0 8px}.checks{padding-left:18px;margin:0}.checks li{margin:8px 0;color:var(--muted)}.split{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}.timeline{list-style:none;padding:0;margin:0;counter-reset:step}.timeline li{position:relative;padding-left:58px;margin:18px 0}.timeline li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,var(--red),var(--blue2));font-weight:900}
+.cta-band{text-align:center;padding:42px;border-radius:28px;background:linear-gradient(135deg,rgba(255,95,125,.11),rgba(78,167,255,.10));border:1px solid var(--line);box-shadow:var(--shadow)}.footer{text-align:center;color:var(--muted);padding:30px 0 60px}
+@media (max-width:1080px){.hero-shell,.grid2,.grid3,.metric-grid,.path-grid,.split,.hero-notes{grid-template-columns:1fr}.hero-visual{min-height:420px}}
+@media (max-width:760px){.wrap{padding:16px}.nav{flex-direction:column;align-items:flex-start;gap:12px}.navlinks{width:100%;gap:10px}.navlinks .btn{width:100%;justify-content:center}.hero{padding:16px 0 28px}h1{font-size:clamp(2.25rem,10vw,4rem);max-width:100%}.hero p{font-size:1rem}.hero-card{left:16px;right:16px;bottom:16px;padding:16px}.hero-logo{width:70px;right:16px;top:16px}.section{padding:40px 0}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="nav">
-    <div class="brand">
-      <img src="/assets/branding/claw-forge-political-intelligence-logo.png" alt="Claw Forge Political Intelligence logo" />
-      <div>Claw Forge Political Intelligence<small>Rapid political communication systems</small></div>
-    </div>
-    <div class="navlinks">
-      <a href="#services">Services</a>
-      <a href="#proof">Proof</a>
-      <a href="#packages">Packages</a>
-      <a href="#process">Process</a>
-      <a class="btn btn-primary" href="https://cal.com/clawforge-qo4djf/clawforge-consultation" target="_blank" rel="noopener">Book Strategy Call</a>
-    </div>
+    <div class="brand"><img src="/assets/branding/claw-forge-political-intelligence-logo.png" alt="logo" /><div>Claw Forge Political Intelligence<small>Rapid political communication systems</small></div></div>
+    <div class="navlinks"><a href="/rapid-response-desk/">Rapid Response Desk</a><a href="/political-intake/">Intake</a><a href="/political-sample-pack/">Sample Pack</a><a class="btn btn-primary" href="https://cal.com/clawforge-qo4djf/clawforge-consultation" target="_blank" rel="noopener">Book Strategy Call</a></div>
   </div>
 
-  <section class="hero-shell">
-    <div class="hero">
+  <section class="hero">
+    <div class="hero-shell">
       <div>
-        <div class="kicker">Political media agency</div>
-        <h1><span class="signal">Weak response costs.</span><span class="line2">Claw Forge Political Intelligence turns speeches, controversies, and policy pressure into disciplined communication assets.</span><span class="line3">So campaigns, commentators, and civic organizations can respond like operators, not scramble like spectators.</span></h1>
-        <p class="sub">This page is your premium front door: a clearer hero, cleaner alignment, stronger section rhythm, and imagery that actually signals political pressure, media control, and strategic response.</p>
-        <div class="proof-line">
-          <span><b>•</b> Rapid analysis</span>
-          <span><b>•</b> Message discipline</span>
-          <span><b>•</b> Broadcast-ready output</span>
-          <span><b>•</b> Proof + intake + next-step funnel</span>
-        </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/political-intake/">Start Strategy Intake</a>
-          <a class="btn btn-secondary" href="/rapid-response-desk/">View Rapid Response Desk</a>
-          <a class="btn btn-secondary" href="/political-sample-pack/">View Sample Pack</a>
-        </div>
-        <div class="micro-reassure">Use this page for positioning and trust. Use Rapid Response Desk for the direct offer. Use the sample pack and deck when someone asks for more information.</div>
-        <div class="hero-stats">
-          <div class="stat-card"><strong>Fast analysis</strong><span class="section-copy">Break down what was actually said, what is weak, and what needs answering.</span></div>
-          <div class="stat-card"><strong>Disciplined messaging</strong><span class="section-copy">Clarify the angle, control the response, and tighten public-facing language.</span></div>
-          <div class="stat-card"><strong>Deployable assets</strong><span class="section-copy">Move from issue to scripts, briefs, social packs, and talking points without chaos.</span></div>
-        </div>
+        <div class="eyebrow">Strategic front door</div>
+        <h1>Rapid political communication systems for voices under pressure.</h1>
+        <p>Claw Forge Political Intelligence helps campaigns, commentators, civic organizations, and public-interest media respond faster, communicate more clearly, and stay more disciplined when political pressure rises.</p>
+        <div class="hero-cta"><a class="btn btn-primary" href="/political-intake/">Start Strategy Intake</a><a class="btn btn-secondary" href="/rapid-response-desk/">View Rapid Response Desk</a><a class="btn btn-secondary" href="/political-deck/">View Presentation Deck</a></div>
+        <div class="hero-notes"><div class="note"><strong>What it does</strong><span class="copy">Turns speeches, controversies, and policy pressure into deployable communication assets.</span></div><div class="note"><strong>Who it helps</strong><span class="copy">Campaigns, commentators, civic organizations, and public-interest media operations.</span></div><div class="note"><strong>Why it matters</strong><span class="copy">Weak response loses time, clarity, and narrative control.</span></div></div>
       </div>
       <div class="hero-visual">
-        <div class="floating-card fc-1"><div class="label">Signal</div><strong>Speech breakdown</strong><p>Claims, omissions, framing, contradictions, and pressure points surfaced fast.</p></div>
-        <div class="floating-card fc-2"><div class="label">Response</div><strong>Message discipline</strong><p>Rebuttal logic, briefing notes, public framing, and cleaner response structure.</p></div>
-        <div class="floating-card fc-3"><div class="label">Deployment</div><strong>Media-ready output</strong><p>Scripts, public briefs, social packs, and communication assets ready to use.</p></div>
-        <img class="logo-wrap" src="/assets/branding/claw-forge-political-intelligence-logo.png" alt="Claw Forge Political Intelligence emblem" />
+        <img class="hero-logo" src="/assets/branding/claw-forge-political-intelligence-logo.png" alt="logo" />
+        <div class="hero-card"><strong>Built for real pressure environments.</strong><span class="copy">Use this page for the strategic overview, the value proposition, and the trust layer. Use Rapid Response Desk when you want the direct service path.</span></div>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt band-blue">
-    <div class="trust-row">
-      <div class="panel">
-        <div class="eyebrow">Built for pressure environments</div>
-        <h2>Political communication breaks when the response system is weak.</h2>
-        <p class="section-copy">When a speech lands, a claim spreads, or a controversy starts moving, most teams lose time trying to understand the signal, shape the angle, and prepare usable assets. The narrative keeps moving while the response is still being assembled.</p>
-      </div>
-      <div class="trust-badges">
-        <div class="trust-badge">Campaign Teams</div>
-        <div class="trust-badge">Commentators</div>
-        <div class="trust-badge">Advocacy Groups</div>
-        <div class="trust-badge">Civic Orgs</div>
-        <div class="trust-badge">Public-Interest Media</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt band-dark">
-    <div class="metric-strip">
-      <div class="metric-card"><strong>1</strong><span class="section-copy">Clear political vertical with dedicated live pages</span></div>
-      <div class="metric-card"><strong>2</strong><span class="section-copy">Paid Rapid Response Desk offers active now</span></div>
-      <div class="metric-card"><strong>7+</strong><span class="section-copy">Connected pages in the political funnel stack</span></div>
-      <div class="metric-card"><strong>Now</strong><span class="section-copy">Ready for outreach, calls, and direct conversion</span></div>
-    </div>
-  </section>
-
-  <section class="section section-alt band-red" id="services">
-    <div class="eyebrow">Service architecture</div>
-    <h2>Built like a system, not a random content service.</h2>
-    <p class="section-copy">Each page in this vertical should feel like it has a purpose. This page introduces the business. The inner pages go deeper into the offer, proof, intake, and conversion flow.</p>
-    <div class="grid grid-2">
-      <div class="service-card">
-        <div class="eyebrow">Flagship offer</div>
-        <h3>Rapid Response Desk</h3>
-        <p class="section-copy">Fast issue analysis and broadcast-ready response for active speeches, controversies, policy pressure, and urgent public messaging moments.</p>
-        <ul class="checks"><li>Speech and statement breakdowns</li><li>Response framing and rebuttal angles</li><li>Radio-ready scripts</li><li>Social response packs</li><li>Short public briefs</li></ul>
-        <p><a href="/rapid-response-desk/" style="color:var(--blue2);font-weight:800">Open the offer page →</a></p>
-      </div>
-      <div class="service-card">
-        <div class="eyebrow">Recurring support</div>
-        <h3>Political Media Engine</h3>
-        <p class="section-copy">For recurring commentary, issue explainers, social content, and structured public-interest media output.</p>
-        <ul class="checks"><li>Radio scripts and commentary support</li><li>Short video and social script packs</li><li>Issue explainers</li><li>Editorial rhythm and talking points</li></ul>
-      </div>
-      <div class="service-card">
-        <div class="eyebrow">Campaign layer</div>
-        <h3>Campaign Communication System</h3>
-        <p class="section-copy">Message discipline, contrast framing, debate prep support, and structured campaign communication guidance.</p>
-        <ul class="checks"><li>Message house development</li><li>Policy breakdowns</li><li>Debate prep support</li><li>Spokesperson guidance</li></ul>
-      </div>
-      <div class="service-card">
-        <div class="eyebrow">Public clarity</div>
-        <h3>Civic Education Media</h3>
-        <p class="section-copy">Plain-language political and policy education assets for civic groups, nonprofits, advocacy campaigns, and public-interest media.</p>
-        <ul class="checks"><li>Civic explainers</li><li>Policy summaries</li><li>Community briefing content</li><li>Public-interest media packs</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt band-dark" id="proof">
-    <div class="showcase-row">
-      <div class="showcase-card">
-        <div class="eyebrow">Proof stack</div>
-        <h2>The offer now has actual proof layers.</h2>
-        <p class="section-copy">Not just a brand page. Not just package copy. This vertical now includes examples, sample deliverables, a shareable sample pack, intake guidance, a hosted deck, and a booked-call next-steps page.</p>
-        <div class="grid grid-2">
-          <div class="proof-card"><h3>Examples page</h3><p class="section-copy">Shows the shape of the analysis, messaging, and execution outputs.</p><p><a href="/political-examples/" style="color:var(--blue2);font-weight:800">View examples →</a></p></div>
-          <div class="proof-card"><h3>Sample deliverables</h3><p class="section-copy">Shows what a speech breakdown, radio script, social pack, and public brief actually look like.</p><p><a href="/political-samples/" style="color:var(--blue2);font-weight:800">View sample deliverables →</a></p></div>
-          <div class="proof-card"><h3>Sample pack</h3><p class="section-copy">A cleaner presentation-ready proof asset for outreach and sales follow-up.</p><p><a href="/political-sample-pack/" style="color:var(--blue2);font-weight:800">View sample pack →</a></p></div>
-          <div class="proof-card"><h3>Hosted deck</h3><p class="section-copy">A visual, pitch-ready presentation page that explains the business more clearly to warm leads.</p><p><a href="/political-deck/" style="color:var(--blue2);font-weight:800">View presentation deck →</a></p></div>
-        </div>
-      </div>
-      <div class="timeline" id="process">
-        <div class="eyebrow">How it works</div>
-        <h3 style="margin-top:0">From issue to deployable communication.</h3>
-        <ol>
-          <li>Send the source material: speech, statement, policy text, interview, or controversy summary.</li>
-          <li>We identify the signal: key claims, omissions, contradictions, and the strongest pressure points.</li>
-          <li>We shape the response: angle, rebuttal logic, message discipline, and public-interest framing.</li>
-          <li>We build the assets: scripts, briefs, talking points, social packs, and communication materials ready to use.</li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt band-blue" id="packages">
-    <div class="eyebrow">Package preview</div>
-    <h2>Simple ways to work with us.</h2>
-    <p class="section-copy">This page stays softer than the direct offer page. It previews the package logic and points people toward the right next action instead of trying to close every visitor instantly.</p>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="eyebrow">Starter</div>
-        <h3>Rapid Response Desk</h3>
-        <div class="price">$500 <small>/ month</small></div>
-        <p class="section-copy">Best for smaller commentators, hosts, and issue advocates who need reliable response support without overbuilding.</p>
-        <ul class="checks"><li>Up to 2 response packs per month</li><li>Issue or speech analysis</li><li>1 script per event</li><li>1 short social pack per event</li></ul>
-      </div>
-      <div class="pricing-card featured">
-        <div class="eyebrow">Best lead offer</div>
-        <h3>Rapid Response Desk Standard</h3>
-        <div class="price">$1,250 <small>/ month</small></div>
-        <p class="section-copy">Best for active public voices, media operators, and organizations dealing with recurring issue pressure.</p>
-        <ul class="checks"><li>Up to 4 response packs per month</li><li>Deeper issue analysis</li><li>Radio-ready script per response</li><li>Social message pack per response</li><li>Short public brief when needed</li></ul>
-      </div>
-      <div class="pricing-card">
-        <div class="eyebrow">Custom</div>
-        <h3>War Room Support</h3>
-        <div class="price">Custom</div>
-        <p class="section-copy">Best for high-pressure communication environments that need priority response, same-day turnaround, and custom volume.</p>
-        <ul class="checks"><li>Priority response support</li><li>Same-day turnaround when needed</li><li>Higher-volume deliverables</li><li>Ongoing message discipline support</li></ul>
-      </div>
+  <section class="section band band-blue">
+    <h2>Who this is for</h2>
+    <div class="path-grid">
+      <div class="path"><h3>Campaign teams</h3><p class="copy">Need faster issue response, clearer messaging, and stronger internal briefing support.</p></div>
+      <div class="path"><h3>Commentators & hosts</h3><p class="copy">Need speech breakdowns, sharper response framing, and media-ready scripts.</p></div>
+      <div class="path"><h3>Civic & advocacy organizations</h3><p class="copy">Need public clarity, issue framing, explainers, and communication structure.</p></div>
     </div>
   </section>
 
   <section class="section">
-    <div class="grid grid-2">
-      <div class="panel"><div class="eyebrow">Credibility</div><h3>Fast does not mean reckless.</h3><p class="section-copy">The service is built for disciplined communication, lawful civic messaging, fact-aware response, and public-interest framing.</p></div>
-      <div class="panel"><div class="eyebrow">Not included</div><ul class="checks"><li>No fabricated attacks</li><li>No fake quotes or endorsements</li><li>No deceptive manipulation</li><li>No unlawful voter suppression tactics</li></ul></div>
+    <div class="metric-grid">
+      <div class="metric"><strong>2</strong><span class="copy">Live paid Rapid Response Desk offers</span></div>
+      <div class="metric"><strong>7+</strong><span class="copy">Connected pages in the political funnel</span></div>
+      <div class="metric"><strong>1</strong><span class="copy">Clear political niche offer stack</span></div>
+      <div class="metric"><strong>Now</strong><span class="copy">Ready for outreach, calls, and conversion</span></div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="closing">
-      <div class="eyebrow" style="color:var(--ice)">Built for speed and discipline</div>
-      <h2>Need faster, clearer, more disciplined political communication?</h2>
-      <p class="section-copy" style="margin:0 auto 20px">If you need the bigger picture first, stay here. If you need the direct service path, go to Rapid Response Desk. If you need a cleaner explanation asset for a warm lead, use the deck or sample pack.</p>
-      <div class="cta-row" style="justify-content:center">
-        <a class="btn btn-primary" href="/political-intake/">Start Strategy Intake</a>
-        <a class="btn btn-secondary" href="/rapid-response-desk/">View Rapid Response Desk</a>
-        <a class="btn btn-secondary" href="/political-deck/">View Presentation Deck</a>
+  <section class="section band band-red">
+    <h2>What problem this solves</h2>
+    <p class="copy">Political communication often breaks down because response is too slow, messaging is inconsistent, policy is poorly translated, and teams do not have usable communication assets ready when the pressure hits.</p>
+    <div class="grid3">
+      <div class="card"><h3>Slow response</h3><p class="copy">The issue moves first. The team reacts later. That gap creates narrative damage.</p></div>
+      <div class="card"><h3>Weak message discipline</h3><p class="copy">Different people say different things and credibility starts slipping fast.</p></div>
+      <div class="card"><h3>No usable assets</h3><p class="copy">Even when the angle is clear, there is no script, pack, or brief ready to deploy.</p></div>
+    </div>
+  </section>
+
+  <section class="section band">
+    <div class="split">
+      <div class="card">
+        <h2>What the system does</h2>
+        <ul class="checks"><li>Speech and statement breakdowns</li><li>Response framing and rebuttal logic</li><li>Radio-ready and commentary-ready scripts</li><li>Social response packs</li><li>Public briefs and explainers</li><li>Communication support under pressure</li></ul>
+      </div>
+      <div class="card">
+        <h2>How it works</h2>
+        <ol class="timeline"><li>An issue, speech, controversy, or pressure moment appears.</li><li>The signal is analyzed: key claims, omissions, contradictions, and what matters most.</li><li>The response is shaped: angle, message discipline, and communication strategy.</li><li>Deployable assets are built: scripts, briefs, social packs, and talking points.</li></ol>
       </div>
     </div>
   </section>
 
-  <div class="footer">
-    <p><strong>Claw Forge Political Intelligence</strong> · rapid political communication systems.</p>
-    <p><a href="/political-next-steps/">Next steps</a> · <a href="https://cal.com/clawforge-qo4djf/clawforge-consultation" target="_blank" rel="noopener">Book strategy call</a> · <a href="mailto:kofiadmn@agentmail.to?subject=Political%20Media%20Inquiry">kofiadmn@agentmail.to</a></p>
-  </div>
+  <section class="section band band-blue">
+    <h2>Core service lanes</h2>
+    <div class="grid2">
+      <div class="card"><h3>Rapid Response Desk</h3><p class="copy">Direct issue-response support for speeches, controversies, policy pressure, and active public messaging moments.</p><p><a href="/rapid-response-desk/" style="color:var(--blue);font-weight:800">Open the direct offer →</a></p></div>
+      <div class="card"><h3>Political Media Engine</h3><p class="copy">Recurring support for commentary, explainers, scripts, and structured public-interest media output.</p></div>
+      <div class="card"><h3>Campaign Communication System</h3><p class="copy">Message discipline, policy breakdowns, debate prep support, and spokesperson guidance.</p></div>
+      <div class="card"><h3>Civic Education Media</h3><p class="copy">Plain-language political and policy education for civic groups, nonprofits, and advocacy organizations.</p></div>
+    </div>
+  </section>
+
+  <section class="section band">
+    <h2>Proof and supporting assets</h2>
+    <div class="grid2">
+      <div class="card"><h3>Presentation Deck</h3><p class="copy">A hosted visual presentation that explains the business, the logic, and the offer clearly.</p><p><a href="/political-deck/" style="color:var(--blue);font-weight:800">View the deck →</a></p></div>
+      <div class="card"><h3>Sample Pack</h3><p class="copy">A proof asset you can send to warm leads who want to understand the output and quality level.</p><p><a href="/political-sample-pack/" style="color:var(--blue);font-weight:800">View the sample pack →</a></p></div>
+      <div class="card"><h3>Examples</h3><p class="copy">Shows the shape of the analysis, messaging, and communication outputs.</p><p><a href="/political-examples/" style="color:var(--blue);font-weight:800">View examples →</a></p></div>
+      <div class="card"><h3>Sample Deliverables</h3><p class="copy">Shows what a speech breakdown, radio response script, social pack, and public brief actually look like.</p><p><a href="/political-samples/" style="color:var(--blue);font-weight:800">View sample deliverables →</a></p></div>
+    </div>
+  </section>
+
+  <section class="section band band-red">
+    <h2>Offer preview</h2>
+    <div class="grid3">
+      <div class="card"><h3>Starter</h3><p class="copy">Entry-level monthly support for lighter response needs.</p></div>
+      <div class="card"><h3>Standard</h3><p class="copy">Stronger monthly support for recurring issue pressure and deeper communication needs.</p></div>
+      <div class="card"><h3>War Room</h3><p class="copy">Custom handling for high-pressure environments that need faster, more intensive support.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-band">
+      <h2 style="margin-top:0">If your operation cannot afford weak communication, build the response system.</h2>
+      <p class="copy" style="margin:0 auto 20px;max-width:820px">Start with the intake if you want guidance. Go directly to Rapid Response Desk if the issue is already moving. Use the deck or sample pack when someone needs a clearer explanation first.</p>
+      <div class="hero-cta" style="justify-content:center"><a class="btn btn-primary" href="/political-intake/">Start Strategy Intake</a><a class="btn btn-secondary" href="/rapid-response-desk/">View Rapid Response Desk</a><a class="btn btn-secondary" href="/political-deck/">View Presentation Deck</a></div>
+    </div>
+  </section>
+
+  <div class="footer"><p><strong>Claw Forge Political Intelligence</strong> · rapid political communication systems.</p><p><a href="/political-next-steps/">Next steps</a> · <a href="https://cal.com/clawforge-qo4djf/clawforge-consultation" target="_blank" rel="noopener">Book strategy call</a> · <a href="mailto:kofiadmn@agentmail.to?subject=Political%20Media%20Inquiry">kofiadmn@agentmail.to</a></p></div>
 </div>
 </body>
 </html>
