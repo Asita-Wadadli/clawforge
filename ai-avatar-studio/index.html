@@ -190,7 +190,7 @@
         .avatar-sample span,
         .avatar-sample strong {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         .avatar-sample span {
             display: inline-block;
@@ -203,13 +203,62 @@
             border-radius: 999px;
         }
         .avatar-sample strong {
-            color: var(--muted);
-            font-size: .8rem;
+            color: var(--text);
+            font-size: .85rem;
             font-weight: 700;
             line-height: 1.25;
-            display: block;
+            display: inline-block;
             text-align: left;
             margin-top: auto;
+            background: rgba(10,15,24,.7);
+            padding: 6px 10px;
+            border-radius: 12px;
+        }
+        .sample-photo,
+        .showcase-image,
+        .use-image,
+        .before-after-full {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .sample-photo {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .avatar-sample::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10,15,24,.08) 0%, rgba(10,15,24,.00) 35%, rgba(10,15,24,.78) 100%);
+            z-index: 1;
+            border-radius: 18px;
+        }
+        .avatar-sample.has-image::before,
+        .showcase-preview.has-image::before,
+        .showcase-preview.has-image::after,
+        .use-mock.has-image::before,
+        .use-mock.has-image::after {
+            display: none;
+        }
+        .avatar-photo,
+        .showcase-photo,
+        .use-photo,
+        .mock-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .avatar-photo {
+            height: 130px;
+            border-radius: 14px;
+            margin-top: 2px;
+        }
+        .mock-photo {
+            border-radius: 16px;
         }
         .before-after-card {
             padding: 24px;
@@ -230,6 +279,30 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
+        }
+        .before-after-single {
+            grid-column: 1 / -1;
+            height: 260px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.08);
+            position: relative;
+            background: rgba(255,255,255,.03);
+        }
+        .before-after-single::after {
+            content: "Before / After";
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            z-index: 2;
+            font-size: .72rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--text);
+            background: rgba(10,15,24,.8);
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-weight: 700;
         }
         .before-box,
         .after-box {
@@ -579,10 +652,10 @@
                     <div class="visual-label">Sample Output Styles</div>
                     <div class="before-after-headline" style="margin-top:8px;">Professional, personal brand, and platform-ready looks</div>
                     <div class="hero-visual-grid">
-                        <div class="avatar-sample"><span>LinkedIn Ready</span><strong>Professional</strong></div>
-                        <div class="avatar-sample"><span>Brand Presence</span><strong>Consultant</strong></div>
-                        <div class="avatar-sample"><span>Social Friendly</span><strong>Creator</strong></div>
-                        <div class="avatar-sample"><span>Confident</span><strong>Authority</strong></div>
+                        <div class="avatar-sample has-image"><span>LinkedIn Ready</span><img class="avatar-photo" src="assets/portrait-man-suit.jpg" alt="Professional AI avatar" /><strong>Professional</strong></div>
+                        <div class="avatar-sample has-image"><span>Brand Presence</span><img class="avatar-photo" src="assets/portrait-woman-dark.jpg" alt="Consultant AI avatar" /><strong>Consultant</strong></div>
+                        <div class="avatar-sample has-image"><span>Social Friendly</span><img class="avatar-photo" src="assets/portrait-woman-light.jpg" alt="Creator AI avatar" /><strong>Creator</strong></div>
+                        <div class="avatar-sample has-image"><span>Confident</span><img class="avatar-photo" src="assets/portrait-man-light.jpg" alt="Authority AI avatar" /><strong>Authority</strong></div>
                     </div>
                 </div>
                 <div class="before-after-card">
@@ -590,18 +663,8 @@
                         <div class="visual-label">Transformation Preview</div>
                         <div class="before-after-headline">From ordinary photo to stronger first impression</div>
                     </div>
-                    <div class="before-after-visual">
-                        <div class="before-box">
-                            <div class="visual-label">Before</div>
-                            <div class="mock"></div>
-                            <div class="visual-title">Casual, forgettable, low-impact</div>
-                        </div>
-                        <div class="after-box">
-                            <div class="visual-label">After</div>
-                            <div class="mock"></div>
-                            <div class="visual-title">Polished, credible, business-ready</div>
-                        </div>
-                    </div>
+                    <img class="before-after-full" src="assets/before-after.jpg" alt="Before and after avatar transformation" style="border-radius:16px; border:1px solid rgba(255,255,255,.08); max-height:340px;" />
+                    <div class="visual-title" style="color: var(--muted);">A simple visual upgrade that shifts the way your profile is perceived before a single word is read.</div>
                 </div>
             </div>
         </div>
@@ -657,22 +720,22 @@
 
             <div class="showcase-grid">
                 <div class="showcase-card">
-                    <div class="showcase-preview"></div>
+                    <div class="showcase-preview has-image"><img class="showcase-photo" src="assets/portrait-man-suit.jpg" alt="Professional LinkedIn avatar" /></div>
                     <h3>Professional / LinkedIn</h3>
                     <p>Clean, polished visuals for credibility, networking, and serious first impressions.</p>
                 </div>
                 <div class="showcase-card">
-                    <div class="showcase-preview"></div>
+                    <div class="showcase-preview has-image"><img class="showcase-photo" src="assets/portrait-woman-dark.jpg" alt="Personal brand avatar" /></div>
                     <h3>Personal Brand</h3>
                     <p>Strong creator, coach, and consultant-style outputs that still feel polished and intentional.</p>
                 </div>
                 <div class="showcase-card">
-                    <div class="showcase-preview"></div>
+                    <div class="showcase-preview has-image"><img class="showcase-photo" src="assets/portrait-woman-light.jpg" alt="Friendly approachable avatar" /></div>
                     <h3>Friendly / Approachable</h3>
                     <p>Warmer looks for community building, social visibility, and a more human online presence.</p>
                 </div>
                 <div class="showcase-card">
-                    <div class="showcase-preview"></div>
+                    <div class="showcase-preview has-image"><img class="showcase-photo" src="assets/portrait-man-light.jpg" alt="Bold confident avatar" /></div>
                     <h3>Bold / Confident</h3>
                     <p>Sharper looks that fit sales, media, speakers, and stronger authority-driven positioning.</p>
                 </div>
@@ -719,17 +782,17 @@
 
             <div class="use-grid">
                 <div class="use-card">
-                    <div class="use-mock"><div class="mock-label">LinkedIn</div></div>
+                    <div class="use-mock has-image"><img class="use-photo" src="assets/linkedin-mockup.jpg" alt="LinkedIn profile mockup using avatar" /><div class="mock-label">LinkedIn</div></div>
                     <h3>LinkedIn Profile</h3>
                     <p>Use a cleaner, more credible image for networking, opportunities, and professional visibility.</p>
                 </div>
                 <div class="use-card">
-                    <div class="use-mock"><div class="mock-label">Website Bio</div></div>
+                    <div class="use-mock has-image"><img class="use-photo" src="assets/portrait-woman-dark.jpg" alt="Website bio style avatar" /><div class="mock-label">Website Bio</div></div>
                     <h3>Website / About Page</h3>
                     <p>Show up with a stronger founder image on your website, landing page, or public-facing bio.</p>
                 </div>
                 <div class="use-card">
-                    <div class="use-mock"><div class="mock-label">Social</div></div>
+                    <div class="use-mock has-image"><img class="use-photo" src="assets/portrait-woman-light.jpg" alt="Social profile style avatar" /><div class="mock-label">Social</div></div>
                     <h3>Social Profiles</h3>
                     <p>Keep your Instagram, Facebook, and other public profiles aligned with the level of brand you want to project.</p>
                 </div>
