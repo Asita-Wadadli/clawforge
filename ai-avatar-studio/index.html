@@ -167,21 +167,22 @@
             margin-top: 18px;
         }
         .avatar-sample {
-            min-height: 180px;
+            min-height: 200px;
             border-radius: 18px;
             padding: 14px;
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
             justify-content: space-between;
             background: linear-gradient(180deg, rgba(96,165,250,.18), rgba(248,113,113,.10));
             border: 1px solid rgba(255,255,255,.08);
             position: relative;
             overflow: hidden;
+            gap: 12px;
         }
         .avatar-sample::before {
             content: "";
             position: absolute;
-            inset: 14px 14px 54px;
+            inset: 42px 14px 48px;
             border-radius: 16px;
             background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.95), rgba(96,165,250,.45) 38%, rgba(17,24,39,.95) 78%);
             opacity: .95;
@@ -193,6 +194,7 @@
         }
         .avatar-sample span {
             display: inline-block;
+            align-self: flex-start;
             padding: 6px 10px;
             font-size: .72rem;
             font-weight: 700;
@@ -203,6 +205,11 @@
         .avatar-sample strong {
             color: var(--muted);
             font-size: .8rem;
+            font-weight: 700;
+            line-height: 1.25;
+            display: block;
+            text-align: left;
+            margin-top: auto;
         }
         .before-after-card {
             padding: 24px;
@@ -572,10 +579,10 @@
                     <div class="visual-label">Sample Output Styles</div>
                     <div class="before-after-headline" style="margin-top:8px;">Professional, personal brand, and platform-ready looks</div>
                     <div class="hero-visual-grid">
-                        <div class="avatar-sample"><span>LinkedIn Ready</span><strong>Corporate</strong></div>
+                        <div class="avatar-sample"><span>LinkedIn Ready</span><strong>Professional</strong></div>
                         <div class="avatar-sample"><span>Brand Presence</span><strong>Consultant</strong></div>
                         <div class="avatar-sample"><span>Social Friendly</span><strong>Creator</strong></div>
-                        <div class="avatar-sample"><span>Confident</span><strong>Sales / Media</strong></div>
+                        <div class="avatar-sample"><span>Confident</span><strong>Authority</strong></div>
                     </div>
                 </div>
                 <div class="before-after-card">
