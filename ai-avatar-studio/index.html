@@ -132,6 +132,191 @@
             font-size: 0.9rem; 
             color: var(--muted);
         }
+        .hero-visuals {
+            display: grid;
+            grid-template-columns: 1.3fr .9fr;
+            gap: 24px;
+            max-width: 1050px;
+            margin: 44px auto 0;
+            text-align: left;
+        }
+        .hero-visual-card,
+        .showcase-card,
+        .expect-card,
+        .use-card {
+            background: rgba(31,41,55,.88);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        .hero-visual-card {
+            padding: 24px;
+        }
+        .hero-visual-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-top: 18px;
+        }
+        .avatar-sample {
+            min-height: 180px;
+            border-radius: 18px;
+            padding: 14px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            background: linear-gradient(180deg, rgba(96,165,250,.18), rgba(248,113,113,.10));
+            border: 1px solid rgba(255,255,255,.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .avatar-sample::before {
+            content: "";
+            position: absolute;
+            inset: 14px 14px 54px;
+            border-radius: 16px;
+            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.95), rgba(96,165,250,.45) 38%, rgba(17,24,39,.95) 78%);
+            opacity: .95;
+        }
+        .avatar-sample span,
+        .avatar-sample strong {
+            position: relative;
+            z-index: 1;
+        }
+        .avatar-sample span {
+            display: inline-block;
+            padding: 6px 10px;
+            font-size: .72rem;
+            font-weight: 700;
+            color: var(--text);
+            background: rgba(10,15,24,.85);
+            border-radius: 999px;
+        }
+        .avatar-sample strong {
+            color: var(--muted);
+            font-size: .8rem;
+        }
+        .before-after-card {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .before-after-headline {
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+        .before-after-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .before-box,
+        .after-box {
+            min-height: 220px;
+            border-radius: 18px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(255,255,255,.08);
+        }
+        .before-box {
+            background: linear-gradient(180deg, rgba(148,163,184,.18), rgba(15,23,42,.75));
+        }
+        .after-box {
+            background: linear-gradient(180deg, rgba(96,165,250,.18), rgba(15,23,42,.75));
+        }
+        .before-box .mock,
+        .after-box .mock {
+            height: 130px;
+            border-radius: 16px;
+        }
+        .before-box .mock {
+            background: linear-gradient(180deg, rgba(255,255,255,.25), rgba(148,163,184,.35));
+            filter: blur(.3px) saturate(.8);
+        }
+        .after-box .mock {
+            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.95), rgba(96,165,250,.55) 35%, rgba(17,24,39,.95) 74%);
+        }
+        .visual-label {
+            font-size: .8rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-weight: 700;
+        }
+        .visual-title {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .expect-grid,
+        .use-grid,
+        .showcase-grid {
+            display: grid;
+            gap: 24px;
+        }
+        .expect-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        .expect-card,
+        .use-card,
+        .showcase-card {
+            padding: 24px;
+        }
+        .expect-card h3,
+        .use-card h3,
+        .showcase-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+        .expect-card p,
+        .use-card p,
+        .showcase-card p {
+            color: var(--muted);
+            font-size: .95rem;
+        }
+        .showcase-grid {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+        .showcase-preview {
+            height: 170px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.95), rgba(96,165,250,.5) 34%, rgba(17,24,39,.95) 75%);
+            border: 1px solid rgba(255,255,255,.08);
+        }
+        .use-grid {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        .use-mock {
+            height: 160px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(96,165,250,.12));
+            border: 1px solid rgba(255,255,255,.08);
+            position: relative;
+        }
+        .use-mock::before {
+            content: "";
+            position: absolute;
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            top: 22px;
+            left: 22px;
+            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.98), rgba(96,165,250,.55) 32%, rgba(17,24,39,.95) 76%);
+        }
+        .use-mock::after {
+            content: "";
+            position: absolute;
+            left: 22px;
+            right: 22px;
+            bottom: 24px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(255,255,255,.08);
+        }
         
         /* Trust Bar */
         .trust-bar { 
@@ -299,6 +484,12 @@
             .step { flex-direction: column; text-align: center; }
             .step-number { margin: 0 auto; }
             .trust-content { gap: 20px; }
+            .hero-visuals,
+            .before-after-visual { grid-template-columns: 1fr; }
+            .hero-visual-grid,
+            .showcase-grid,
+            .expect-grid,
+            .use-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -319,15 +510,46 @@
     <section class="hero">
         <div class="container">
             <div class="hero-badge">🚀 Powered by Claw Forge Systems</div>
-            <h1>Transform Your Digital Presence</h1>
-            <p>Get 10 professional, AI-generated avatars in 24 hours. Perfect for LinkedIn, social media, and building your personal brand.</p>
+            <h1>Upgrade How You Show Up Online</h1>
+            <p>Get 10 professional, AI-generated avatars in 24 hours — built for LinkedIn, social media, websites, speaker bios, and your personal brand.</p>
             
             <div class="price-box">
                 <div class="price">$27 <span>one-time</span></div>
             </div>
             
             <a href="https://buy.stripe.com/aFadR94Wy6dE3aW3ovffy05" class="cta-button">Get Started Now →</a>
-            <p class="guarantee">✓ 24-hour delivery ✓ 100% satisfaction guarantee ✓ 500+ happy customers</p>
+            <p class="guarantee">✓ 24-hour delivery ✓ 100% satisfaction guarantee ✓ business-ready avatar styles</p>
+
+            <div class="hero-visuals">
+                <div class="hero-visual-card">
+                    <div class="visual-label">Sample Output Styles</div>
+                    <div class="before-after-headline" style="margin-top:8px;">Professional, personal brand, and platform-ready looks</div>
+                    <div class="hero-visual-grid">
+                        <div class="avatar-sample"><span>LinkedIn Ready</span><strong>Corporate</strong></div>
+                        <div class="avatar-sample"><span>Brand Presence</span><strong>Consultant</strong></div>
+                        <div class="avatar-sample"><span>Social Friendly</span><strong>Creator</strong></div>
+                        <div class="avatar-sample"><span>Confident</span><strong>Sales / Media</strong></div>
+                    </div>
+                </div>
+                <div class="before-after-card">
+                    <div>
+                        <div class="visual-label">Transformation Preview</div>
+                        <div class="before-after-headline">From ordinary photo to stronger first impression</div>
+                    </div>
+                    <div class="before-after-visual">
+                        <div class="before-box">
+                            <div class="visual-label">Before</div>
+                            <div class="mock"></div>
+                            <div class="visual-title">Casual, forgettable, low-impact</div>
+                        </div>
+                        <div class="after-box">
+                            <div class="visual-label">After</div>
+                            <div class="mock"></div>
+                            <div class="visual-title">Polished, credible, business-ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -347,28 +569,58 @@
     <section class="section">
         <div class="container">
             <h2>What You Get</h2>
-            <p class="section-subtitle">Professional avatars for every platform and purpose</p>
+            <p class="section-subtitle">A simple, visual upgrade package built for first impressions, credibility, and everyday use.</p>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">💼</div>
-                    <h3>Corporate Professional</h3>
-                    <p>Clean, polished headshots perfect for LinkedIn, business cards, and professional profiles.</p>
+                    <h3>10 Professional Avatars</h3>
+                    <p>A set of polished AI-generated portraits you can use across multiple platforms and situations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Business + Social Ready</h3>
+                    <p>Built for LinkedIn, websites, social profiles, speaker bios, and digital brand presence.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
-                    <h3>Creative Artistic</h3>
-                    <p>Eye-catching, stylized portraits that stand out on Instagram and social media.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">😊</div>
-                    <h3>Casual Friendly</h3>
-                    <p>Approachable, natural looks ideal for personal branding and community building.</p>
+                    <h3>Multiple Useful Styles</h3>
+                    <p>Get a range of looks from polished and professional to approachable and personal-brand friendly.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Fast Delivery</h3>
-                    <p>All 10 avatars delivered within 24 hours. No waiting, no hassle.</p>
+                    <h3>24-Hour Delivery</h3>
+                    <p>Fast turnaround so you can upgrade your online presence without delays or a photo shoot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--panel);">
+        <div class="container">
+            <h2>What Your Avatar Set Can Look Like</h2>
+            <p class="section-subtitle">You are not getting one generic image. You are getting a set of looks you can actually use in different business and brand settings.</p>
+
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <div class="showcase-preview"></div>
+                    <h3>Professional / LinkedIn</h3>
+                    <p>Clean, polished visuals for credibility, networking, and serious first impressions.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-preview"></div>
+                    <h3>Personal Brand</h3>
+                    <p>Strong creator, coach, and consultant-style outputs that still feel polished and intentional.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-preview"></div>
+                    <h3>Friendly / Approachable</h3>
+                    <p>Warmer looks for community building, social visibility, and a more human online presence.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-preview"></div>
+                    <h3>Bold / Confident</h3>
+                    <p>Sharper looks that fit sales, media, speakers, and stronger authority-driven positioning.</p>
                 </div>
             </div>
         </div>
@@ -406,11 +658,62 @@
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <h2>Where You Can Use Them</h2>
+            <p class="section-subtitle">Built for visibility, credibility, and stronger first impressions anywhere your face represents your brand.</p>
+
+            <div class="use-grid">
+                <div class="use-card">
+                    <div class="use-mock"></div>
+                    <h3>LinkedIn Profile</h3>
+                    <p>Use a cleaner, more credible image for networking, opportunities, and professional visibility.</p>
+                </div>
+                <div class="use-card">
+                    <div class="use-mock"></div>
+                    <h3>Website / About Page</h3>
+                    <p>Show up with a stronger founder image on your website, landing page, or public-facing bio.</p>
+                </div>
+                <div class="use-card">
+                    <div class="use-mock"></div>
+                    <h3>Social Profiles</h3>
+                    <p>Keep your Instagram, Facebook, and other public profiles aligned with the level of brand you want to project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--panel);">
+        <div class="container">
+            <h2>What to Expect From Your Avatar Set</h2>
+            <p class="section-subtitle">Clear expectations create better confidence. Here’s what this offer is designed to give you.</p>
+
+            <div class="expect-grid">
+                <div class="expect-card">
+                    <h3>Multiple Style Variations</h3>
+                    <p>Your set is designed to give you useful variety, not ten copies of the same look.</p>
+                </div>
+                <div class="expect-card">
+                    <h3>Polished Presentation</h3>
+                    <p>The goal is a cleaner, stronger, more professional visual presence across your brand.</p>
+                </div>
+                <div class="expect-card">
+                    <h3>Fast, Simple Delivery</h3>
+                    <p>No studio scheduling, no photographer fees, no dragged-out process — just digital delivery within 24 hours.</p>
+                </div>
+                <div class="expect-card">
+                    <h3>Ready-to-Use Files</h3>
+                    <p>Use your finished avatars across LinkedIn, websites, social profiles, business pages, and speaker materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="section">
         <div class="container">
             <h2>What Our Customers Say</h2>
-            <p class="section-subtitle">Join 500+ professionals who've transformed their online presence</p>
+            <p class="section-subtitle">Join professionals using Claw Forge AI Avatar Studio to improve how they show up online</p>
             
             <div class="testimonials-grid">
                 <div class="testimonial">
