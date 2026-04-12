@@ -1,0 +1,84 @@
+{
+  "skill_name": "Interview Intelligence System",
+  "version": "1.0.0",
+  "default_settings": {
+    "tone": "neutral",
+    "platform": "radio",
+    "question_count": 15,
+    "include_show_flow": true,
+    "include_followups": true,
+    "output_format": "formatted_text"
+  },
+  "question_counts": {
+    "short": 10,
+    "medium": 15,
+    "long": 20
+  },
+  "tones": {
+    "aggressive": "Hard-hitting, accountability-focused, confrontational when warranted",
+    "neutral": "Balanced, factual, probing but fair",
+    "soft": "Conversational, exploratory, relationship-building"
+  },
+  "platforms": {
+    "radio": "Audio-focused, shorter questions, clear transitions",
+    "tv": "Visual-aware, soundbite-friendly, segment-based",
+    "podcast": "Long-form, deep dive, conversational flow",
+    "print": "Detailed, quote-ready, comprehensive"
+  },
+  "delivery_methods": [
+    "web_interface",
+    "whatsapp",
+    "pdf_export",
+    "email"
+  ],
+  "features": {
+    "core": [
+      "question_generation",
+      "five_w_analysis",
+      "talking_points"
+    ],
+    "advanced": [
+      "followup_logic",
+      "show_structure",
+      "political_analysis",
+      "stakeholder_mapping"
+    ],
+    "premium": [
+      "voice_output",
+      "live_assistant",
+      "breaking_news_alerts",
+      "custom_templates"
+    ]
+  },
+  "pricing": {
+    "quick_kit": {
+      "price": 27,
+      "features": ["question_generation", "five_w_analysis"],
+      "questions": 10,
+      "delivery": ["web_interface"]
+    },
+    "full_system": {
+      "price": 47,
+      "features": ["question_generation", "five_w_analysis", "followup_logic", "talking_points", "show_structure"],
+      "questions": 20,
+      "delivery": ["web_interface", "whatsapp", "pdf_export"]
+    },
+    "daily_intelligence": {
+      "price": 97,
+      "billing": "monthly",
+      "features": ["all_features", "unlimited_generations", "daily_briefings", "priority_support"],
+      "questions": "unlimited",
+      "delivery": ["all_methods"]
+    }
+  },
+  "political_analysis": {
+    "enabled": true,
+    "sensitivity": "high",
+    "require_neutral_framing": true,
+    "include_all_sides": true
+  },
+  "output_template": "standard_interview_kit",
+  "language": "en",
+  "region": "caribbean",
+  "timezone": "America/Antigua"
+}
