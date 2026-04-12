@@ -139,6 +139,7 @@
             max-width: 1050px;
             margin: 44px auto 0;
             text-align: left;
+            align-items: stretch;
         }
         .hero-visual-card,
         .showcase-card,
@@ -148,6 +149,13 @@
             border: 1px solid var(--line);
             border-radius: 20px;
             box-shadow: var(--shadow);
+        }
+        .hero-visual-card,
+        .before-after-card,
+        .showcase-card,
+        .expect-card,
+        .use-card {
+            height: 100%;
         }
         .hero-visual-card {
             padding: 24px;
@@ -201,6 +209,11 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+            justify-content: space-between;
+            background: rgba(31,41,55,.88);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
         }
         .before-after-headline {
             font-size: 1.1rem;
@@ -258,6 +271,7 @@
         }
         .expect-grid {
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            align-items: stretch;
         }
         .expect-card,
         .use-card,
@@ -277,17 +291,39 @@
             font-size: .95rem;
         }
         .showcase-grid {
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            align-items: stretch;
         }
         .showcase-preview {
             height: 170px;
             border-radius: 16px;
             margin-bottom: 16px;
-            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.95), rgba(96,165,250,.5) 34%, rgba(17,24,39,.95) 75%);
+            background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(96,165,250,.12));
             border: 1px solid rgba(255,255,255,.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .showcase-preview::before {
+            content: "Sample visual";
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            font-size: .72rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 700;
+        }
+        .showcase-preview::after {
+            content: "";
+            position: absolute;
+            inset: 42px 20px 18px;
+            border-radius: 14px;
+            background: radial-gradient(circle at 50% 18%, rgba(255,255,255,.95), rgba(96,165,250,.5) 34%, rgba(17,24,39,.95) 76%);
         }
         .use-grid {
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            align-items: stretch;
         }
         .use-mock {
             height: 160px;
@@ -296,6 +332,7 @@
             background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(96,165,250,.12));
             border: 1px solid rgba(255,255,255,.08);
             position: relative;
+            overflow: hidden;
         }
         .use-mock::before {
             content: "";
@@ -306,6 +343,16 @@
             top: 22px;
             left: 22px;
             background: radial-gradient(circle at 50% 20%, rgba(255,255,255,.98), rgba(96,165,250,.55) 32%, rgba(17,24,39,.95) 76%);
+        }
+        .use-mock .mock-label {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            font-size: .72rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 700;
         }
         .use-mock::after {
             content: "";
@@ -665,17 +712,17 @@
 
             <div class="use-grid">
                 <div class="use-card">
-                    <div class="use-mock"></div>
+                    <div class="use-mock"><div class="mock-label">LinkedIn</div></div>
                     <h3>LinkedIn Profile</h3>
                     <p>Use a cleaner, more credible image for networking, opportunities, and professional visibility.</p>
                 </div>
                 <div class="use-card">
-                    <div class="use-mock"></div>
+                    <div class="use-mock"><div class="mock-label">Website Bio</div></div>
                     <h3>Website / About Page</h3>
                     <p>Show up with a stronger founder image on your website, landing page, or public-facing bio.</p>
                 </div>
                 <div class="use-card">
-                    <div class="use-mock"></div>
+                    <div class="use-mock"><div class="mock-label">Social</div></div>
                     <h3>Social Profiles</h3>
                     <p>Keep your Instagram, Facebook, and other public profiles aligned with the level of brand you want to project.</p>
                 </div>
