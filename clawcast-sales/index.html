@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClawCast — Never Run Out of Smart Questions Again</title>
+    <title>ClawCast — Never Run Out of Questions Again</title>
     <style>
         :root {
             --bg: #0a0f18;
@@ -33,15 +33,13 @@
         .hero-badge { 
             display: inline-block; 
             padding: 8px 16px; 
-            background: rgba(96,165,250,0.15); 
-            border: 1px solid rgba(96,165,250,0.3); 
+            background: rgba(248,113,113,0.15); 
+            border: 1px solid rgba(248,113,113,0.3); 
             border-radius: 999px; 
             font-size: 0.85rem; 
-            color: var(--accent); 
+            color: var(--cta); 
             margin-bottom: 24px; 
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
         }
         h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
         .lead { font-size: 1.4rem; color: var(--muted); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -60,7 +58,6 @@
             justify-content: center;
             color: var(--muted);
             font-size: 1.1rem;
-            text-align: center;
         }
         
         /* Problem Section */
@@ -73,22 +70,252 @@
             border-radius: 12px; 
             border-left: 4px solid var(--cta);
         }
-        .problem-item h3 { color: var(--cta); margin-bottom: 8px; font-size: 1.1rem; }
-        .problem-item p { color: var(--muted); font-size: 0.98rem; }
+        .problem-item h3 { color: var(--cta); margin-bottom: 8px; }
+        .problem-item p { color: var(--muted); }
         
         /* Solution */
         .solution { padding: 80px 0; text-align: center; }
-        .solution h2 { font-size: 2rem; margin-bottom: 24px; }
-        .solution p.intro { color: var(--muted); max-width: 600px; margin: 0 auto 32px; }
+        .solution h2 { font-size: 2rem; margin-bottom: 40px; }
         .features { display: grid; gap: 16px; max-width: 500px; margin: 40px auto; text-align: left; }
         .feature { 
             background: var(--panel); 
             padding: 20px 24px; 
             border-radius: 12px; 
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 16px;
         }
-        .feature-icon { font-size: 1.5rem; margin-top: 2px; }
-        .feature-text { font-size: 1.02rem; }
-        .feature-text strong { display: block; margin-bottom: 4px; }
+        .feature-icon { font-size: 1.5rem; }
+        .feature-text { font-size: 1.1rem; }
+        
+        /* Products */
+        .products { background: var(--bg2); padding: 80px 0; }
+        .products h2 { text-align: center; font-size: 2rem; margin-bottom: 60px; }
+        .tiers { display: grid; gap: 24px; max-width: 600px; margin: 0 auto; }
+        .tier { 
+            background: var(--panel); 
+            padding: 40px; 
+            border-radius: 20px; 
+            border: 2px solid transparent;
+            position: relative;
+        }
+        .tier.featured { 
+            border-color: var(--accent); 
+            transform: scale(1.02);
+        }
+        .tier-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--accent);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .tier-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+        .tier-subtitle { color: var(--muted); margin-bottom: 20px; }
+        .tier-price { font-size: 3rem; font-weight: 800; color: var(--cta); margin-bottom: 24px; }
+        .tier-price span { font-size: 1rem; color: var(--muted); font-weight: 400; }
+        .tier ul { list-style: none; margin-bottom: 32px; }
+        .tier li { 
+            padding: 10px 0; 
+            border-bottom: 1px solid rgba(148,163,184,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .tier li::before { content: "✓"; color: var(--accent); font-weight: 700; }
+        .btn { 
+            display: block; 
+            width: 100%;
+            padding: 18px; 
+            background: var(--cta); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 12px; 
+            font-weight: 700; 
+            font-size: 1.2rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        
+        /* Value Stack */
+        .value { padding: 80px 0; text-align: center; }
+        .value h2 { font-size: 2rem; margin-bottom: 40px; }
+        .value-grid { display: grid; gap: 20px; max-width: 500px; margin: 0 auto; }
+        .value-item { 
+            background: var(--panel); 
+            padding: 24px; 
+            border-radius: 12px; 
+            font-size: 1.2rem;
+        }
+        .value-item strong { color: var(--accent); }
+        
+        /* Close */
+        .close { 
+            background: linear-gradient(135deg, var(--bg2) 0%, var(--bg) 100%);
+            padding: 100px 0; 
+            text-align: center; 
+        }
+        .close h2 { font-size: 2.2rem; margin-bottom: 20px; }
+        .close p { font-size: 1.2rem; color: var(--muted); margin-bottom: 40px; }
+        
+        /* Footer */
+        .footer { text-align: center; padding: 40px 0; color: var(--muted); border-top: 1px solid rgba(148,163,184,0.2); }
+        
+        @media (max-width: 640px) {
+            h1 { font-size: 2.2rem; }
+            .lead { font-size: 1.1rem; }
+            .tier.featured { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">🔥 NOW LIVE</div>
+            <h1>Never Run Out of Questions Again.</h1>
+            <p class="lead">Turn any topic into a full interview, talking points, and broadcast-ready content in minutes.</p>
+            
+            <!-- Header Image -->
+            <img src="assets/header-image.png" alt="ClawCast Interview Intelligence System" style="width: 100%; max-width: 700px; height: auto; margin: 40px auto; border-radius: 20px; display: block;">
+            
+            <a href="#pricing" class="btn">Get Instant Access →</a>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <h2>Most interviewers don't struggle with intelligence.<br>They struggle with:</h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h3>❌ Not knowing what to ask next</h3>
+                    <p>That dead air when your mind goes blank. The guest is waiting. The audience is listening. And you've got nothing.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>❌ Weak follow-up questions</h3>
+                    <p>They give you an opening and you miss it. The moment passes. The interview stays surface-level.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>❌ Poor structure</h3>
+                    <p>No clear flow. Rambling segments. Lost threads. Your audience tunes out before you get to the good stuff.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>❌ Last-minute preparation</h3>
+                    <p>10 minutes before showtime, scrambling through notes. Half-ready. Hoping you don't get caught off guard.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 1.3rem; color: var(--cta); font-weight: 600;">And in live radio or interviews…<br>👉 That hesitation shows.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution">
+        <div class="container">
+            <h2>ClawCast gives you:</h2>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">🎯</span>
+                    <span class="feature-text">Structured interview questions</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔗</span>
+                    <span class="feature-text">Intelligent follow-ups</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📊</span>
+                    <span class="feature-text">Full 5W breakdowns</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">💡</span>
+                    <span class="feature-text">Talking points</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📻</span>
+                    <span class="feature-text">Show flow</span>
+                </div>
+            </div>
+            <p style="font-size: 1.5rem; color: var(--accent); font-weight: 700; margin-top: 40px;">👉 Instantly.</p>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="pricing">
+        <div class="container">
+            <h2>Choose Your Access Level</h2>
+            <div class="tiers">
+                <!-- Starter -->
+                <div class="tier">
+                    <div class="tier-name">⚡ STARTER VERSION</div>
+                    <div class="tier-subtitle">"Quick Interview Generator"</div>
+                    <div class="tier-price">$27 <span>one-time</span></div>
+                    <ul>
+                        <li>Instant question generator</li>
+                        <li>5W breakdown system</li>
+                        <li>Topic briefing engine</li>
+                        <li>Clean structured outputs</li>
+                    </ul>
+                    <p style="color: var(--muted); margin-bottom: 24px; font-size: 0.95rem;"><strong>Perfect for:</strong> Quick prep, basic interviews, everyday use</p>
+                    <a href="https://buy.stripe.com/4gMfZh74G59A3aW4szffy09" class="btn">Get Instant Access – $27</a>
+
+
+                
+                <!-- Pro -->
+                <div class="tier featured">
+                    <div class="tier-badge">MOST POPULAR</div>
+                    <div class="tier-name">🚀 PRO VERSION</div>
+                    <div class="tier-subtitle">"Full Interview Intelligence System"</div>
+                    <div class="tier-price">$47 <span>one-time</span></div>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Advanced questioning angles</li>
+                        <li>Follow-up chains (If they say X → ask Y)</li>
+                        <li>Pressure Mode (accountability questions)</li>
+                        <li>Full show builder (radio / podcast / TV)</li>
+                        <li>Deep analysis output</li>
+                    </ul>
+                    <p style="color: var(--accent); margin-bottom: 24px; font-weight: 600;">👉 This is the real weapon.</p>
+                    Upgrade to Pro – $<a href="https://buy.stripe.com/3cIeVd3Su9pQ8vg9MTffy0a" class="btn">Upgrade to Pro – $47</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Stack -->
+    <section class="value">
+        <div class="container">
+            <h2>Imagine going into every interview with:</h2>
+            <div class="value-grid">
+                <div class="value-item"><strong>Clarity</strong> — Know exactly what to ask</div>
+                <div class="value-item"><strong>Structure</strong> — Clear flow from start to finish</div>
+                <div class="value-item"><strong>Control</strong> — Handle any response with confidence</div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.3rem; color: var(--muted);">No guessing. No scrambling. No weak questions.</p>
+        </div>
+    </section>
+
+    <!-- Final Close -->
+    <section class="close">
+        <div class="container">
+            <h2>The difference between a good interview…<br>and a powerful one…</h2>
+            <p>is preparation.</p>
+            <p style="font-size: 1.4rem; color: var(--text); margin-bottom: 40px;">This gives you that—instantly.</p>
+            <a href="#pricing" class="btn">Get ClawCast Now →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Claw Forge Systems</strong> — Professional Presence, Powered by AI</p>
+            <p style="margin-top: 10px;">📍 Antigua & Barbuda | 🌍 Serving Caribbean & Global Media Professionals</p>
+        </div>
+    </footer>
+</body>
+</html>
