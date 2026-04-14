@@ -4,49 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClawForge Systems – Build. Automate. Scale.</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a1a; color: #fff; line-height: 1.6; }
+    .hero { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #1e1b4b 100%); padding: 80px 20px; text-align: center; }
+    .hero h1 { font-size: 2.5rem; max-width: 900px; margin: 0 auto 20px; line-height: 1.2; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: #cbd5e1; }
+    .btn { display: inline-block; padding: 15px 30px; margin: 10px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+    .btn-primary { background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; }
+    .btn-secondary { border: 2px solid #6366f1; color: #e0e7ff; }
+    .section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+    .section h2 { font-size: 2rem; margin-bottom: 40px; text-align: center; }
+    .offers { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .offer { background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 30px; }
+    .offer h3 { color: #60a5fa; margin-bottom: 15px; font-size: 1.3rem; }
+    .offer .price { color: #a78bfa; font-size: 1.5rem; font-weight: bold; margin: 15px 0; }
+    .offer p { color: #cbd5e1; margin-bottom: 20px; }
+    footer { text-align: center; padding: 40px; color: #64748b; border-top: 1px solid rgba(99, 102, 241, 0.2); }
+  </style>
 </head>
 <body>
   <header class="hero">
-    <div class="hero-inner">
-      <h1>You're not overwhelmed because of work.<br> You're overwhelmed because nothing is automated and everything depends on you.</h1>
-      <p class="subhead">We fix that. We install OpenClaw systems that run your operations for you. Welcome to <strong>ClawForge Systems</strong>.</p>
-      <div class="hero-ctas">
-        <a href="#offers" class="btn primary">Get a ClawCast Tool</a>
-        <a href="mailto:kofiadmn@agentmail.to" class="btn secondary">Talk to ClawForge</a>
-      </div>
-    </div>
+    <h1>You're not overwhelmed because of work. You're overwhelmed because nothing is automated.</h1>
+    <p>We install OpenClaw systems that run your operations for you. Welcome to ClawForge Systems.</p>
+    <a href="#offers" class="btn btn-primary">Get a ClawCast Tool</a>
+    <a href="mailto:kofiadmn@agentmail.to" class="btn btn-secondary">Talk to ClawForge</a>
   </header>
 
   <main>
     <section class="section" id="offers">
       <h2>Featured Tools & Offers</h2>
-      <div class="offers-grid">
-        <article class="offer">
-          <h3>ClawCast Quick Interview Generator (Starter) – $27</h3>
-          <p class="offer-hook">Never Run Out of Questions Again.</p>
-          <p>Turn any topic into a full interview, talking points, and broadcast-ready content in minutes.</p>
-          <a href="offers.html#clawcast-starter" class="btn primary">Get ClawCast Starter – $27</a>
-        </article>
+      <div class="offers">
+        <div class="offer">
+          <h3>ClawCast Quick Interview Generator (Starter)</h3>
+          <p>Never Run Out of Questions Again. Turn any topic into a full interview in minutes.</p>
+          <div class="price">$27</div>
+          <a href="offers.html#clawcast-starter" class="btn btn-primary">Get ClawCast Starter</a>
+        </div>
 
-        <article class="offer">
-          <h3>ClawCast Pro – Full Interview Intelligence System – $47</h3>
-          <p class="offer-hook">From "winging it" to a full Interview Intelligence System.</p>
+        <div class="offer">
+          <h3>ClawCast Pro – Full Interview Intelligence System</h3>
           <p>Everything in Starter + advanced angles, follow-up chains, and show builder.</p>
-          <a href="offers.html#clawcast-pro" class="btn primary">Upgrade to ClawCast Pro – $47</a>
-        </article>
+          <div class="price">$47</div>
+          <a href="offers.html#clawcast-pro" class="btn btn-primary">Upgrade to Pro</a>
+        </div>
 
-        <article class="offer">
-          <h3>AI Avatar Pack – $27</h3>
-          <p class="offer-hook">Give your AI a brain that actually sounds like your brand.</p>
-          <p>Plug-and-play brand avatars and prompts so your AI writes in your true voice.</p>
-          <a href="offers.html#ai-avatar-pack" class="btn primary">Get the AI Avatar Pack – $27</a>
-        </article>
+        <div class="offer">
+          <h3>AI Avatar Pack</h3>
+          <p>Give your AI a brain that actually sounds like your brand.</p>
+          <div class="price">$27</div>
+          <a href="offers.html#ai-avatar-pack" class="btn btn-primary">Get AI Avatar Pack</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <p>© 2026 ClawForge Systems. All rights reserved.</p>
   </footer>
 </body>
