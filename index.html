@@ -3,204 +3,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClawCast Starter - Never Run Out of Questions Again | ClawForge</title>
+  <title>ClawForge Systems - AI-Powered Business Automation</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', system-ui, sans-serif; background: #050510; color: #fff; line-height: 1.6; }
     
-    .header {
-      background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.2));
-      padding: 25px 40px;
-      border-bottom: 1px solid rgba(99,102,241,0.3);
-    }
-    .header a { color: #60a5fa; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
-    
     .hero {
-      background: linear-gradient(180deg, rgba(59,130,246,0.15) 0%, #050510 100%);
-      padding: 100px 40px 80px;
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(59,130,246,0.3) 0%, rgba(139,92,246,0.3) 50%, rgba(5,5,16,0.95) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 80px 40px;
     }
+    .hero-content { max-width: 900px; }
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 800;
-      margin-bottom: 30px;
-      background: linear-gradient(135deg, #fff, #a5b4fc);
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 1.2;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
     }
     .hero-subtitle {
-      font-size: 1.4rem;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
       color: #cbd5e1;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
+      margin-bottom: 30px;
+      line-height: 1.5;
     }
-    .price-tag {
-      display: inline-block;
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      padding: 20px 50px;
-      border-radius: 50px;
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin: 30px 0;
+    .hero-text {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      margin-bottom: 50px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
     }
-    .price-tag span { font-size: 1.1rem; font-weight: 400; opacity: 0.9; }
-    
-    .btn-buy {
+    .btn {
       display: inline-block;
-      background: linear-gradient(135deg, #10b981, #059669);
-      color: white;
-      padding: 22px 60px;
+      padding: 18px 45px;
       border-radius: 50px;
-      font-size: 1.3rem;
       font-weight: 700;
+      font-size: 1.1rem;
       text-decoration: none;
-      margin: 30px 0;
+      transition: all 0.3s ease;
+      margin: 15px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: white;
+      box-shadow: 0 10px 40px rgba(59,130,246,0.4);
+    }
+    .btn-secondary {
+      border: 2px solid rgba(99,102,241,0.5);
+      color: #e0e7ff;
+      background: rgba(99,102,241,0.1);
     }
     
-    .section {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 80px 40px;
-    }
-    .section h2 { font-size: 2.4rem; margin-bottom: 40px; color: #fff; }
-    .section p { color: #cbd5e1; font-size: 1.15rem; margin-bottom: 25px; line-height: 1.7; }
-    
-    .problem-box {
-      background: rgba(30,41,59,0.6);
-      border-left: 4px solid #ef4444;
-      padding: 40px;
-      border-radius: 0 16px 16px 0;
-      margin: 40px 0;
-    }
-    .problem-box h3 { color: #ef4444; margin-bottom: 25px; font-size: 1.4rem; }
-    .problem-box ul { list-style: none; }
-    .problem-box li {
-      padding: 15px 0;
-      color: #cbd5e1;
-      font-size: 1.1rem;
-      padding-left: 40px;
-      position: relative;
-      border-bottom: 1px solid rgba(239,68,68,0.2);
-    }
-    .problem-box li::before { content: '✗'; position: absolute; left: 0; color: #ef4444; font-size: 1.3rem; }
-    
-    .solution-box {
-      background: rgba(30,41,59,0.6);
-      border-left: 4px solid #10b981;
-      padding: 40px;
-      border-radius: 0 16px 16px 0;
-      margin: 40px 0;
-    }
-    .solution-box h3 { color: #10b981; margin-bottom: 20px; font-size: 1.4rem; }
-    
-    .includes-box {
-      background: linear-gradient(145deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1));
-      border: 1px solid rgba(99,102,241,0.3);
-      border-radius: 20px;
-      padding: 50px;
-      margin: 50px 0;
-    }
-    .includes-box h3 { font-size: 1.6rem; margin-bottom: 30px; color: #fff; }
-    .includes-box ul { list-style: none; }
-    .includes-box li {
-      padding: 18px 0;
-      padding-left: 45px;
-      position: relative;
-      color: #cbd5e1;
-      font-size: 1.1rem;
+    .trust-bar {
+      background: rgba(15,23,42,0.8);
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(99,102,241,0.2);
       border-bottom: 1px solid rgba(99,102,241,0.2);
     }
-    .includes-box li::before { content: '✓'; position: absolute; le
-
-copy
-
-
-ft
+    .trust-bar p { color: #94a3b8; font-size: 1rem; }
+    .trust-bar strong { color: #fff; }
+    
+    .problem {
+      padding: 120px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .problem h2 { font-size: 2.8rem; margin-bottom: 50px; }
+    .problem-list {
+      text-align: left;
+      max-width: 650px;
+      margin: 50px auto;
+      list-style: none;
+    }
+    .problem-list li {
+      padding: 20px 0 20px 50px;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      color: #cbd5e1;
+      font-size: 1.2rem;
+      position: relative;
+    }
+    .problem-list li::before {
+      content: '❌';
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+    }
+    .problem-cta { margin-top: 60px; font-size: 1.5rem; color: #fff; font-weight: 600; }
+    
+    .solution {
+      background: linear-gradient(180deg, #050510 0%, #0f172a 50%, #050510 100%);
+      padding: 120px 40px;
+    }
+    .solution-header {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 80px;
+    }
+    .solution-header h2 { font-size: 2.8rem; margin-bottom: 30px; }
+    .solution-header p { color: #94a3b8; font-size: 1.3rem; line-height: 1.7; }
+    
+    .products-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 50px;
+      padding: 0 20px;
+    }
+    .product-card {
+      background: linear-gradient(145deg, rgba(30,41,59,0.9), rgba(15,23,42,0.9));
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 24px;
+      padding: 50px 35px;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; l
 
 CSS
 
 
-: 0; color: #10b981; font-weight: bold; font-size: 1.4rem; }
-    .includes-box li strong { color: #fff; }
+eft: 0; right: 0;
+      height: 5px;
 
 Markup
 
 
-.final-cta {
-      background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.2));
-      padding: 100px 40px;
-      text-align: center;
-      margin-top: 60px;
+background: linear-gradient(90deg, #3b82f6, #8b5cf6);
     }
-    .final-cta h2 { font-size: 2.4rem; margin-bottom: 25px; }
-    .final-cta p { color: #94a3b8; max-width: 650px; margin: 0 auto 40px; font-size: 1.2rem; }
+    .product-badge {
+      display: inline-block;
+      background: rgba(59,130,246,0.2);
+      color: #60a5fa;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    .product-card h3 { font-size: 1.6rem; margin-bottom: 20px; color: #fff; }
+    .product-desc { color: #94a3b8; margin-bottom: 25px; font-size: 1.05rem; }
+    .product-features { list-style: none; margin: 30px 0; }
+    .product-features li {
+      padding: 12px 0 12px 30px;
+      color: #cbd5e1;
+      position: relative;
+    }
+    .product-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #34d399;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .product-price { font-size: 2.8rem; font-weight: 800; color: #fff; margin: 40px 0 25px; }
+    .product-price span { font-size: 1.1rem; color: #94a3b8; font-weight: 400; }
+    .btn-block {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      padding: 18px 30px;
+    }
+    
+    .why { padding: 120px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .why h2 { font-size: 2.8rem; margin-bottom: 60px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+    }
+    .why-item {
+      padding: 40px 30px;
+      background: rgba(30,41,59,0.5);
+      border-radius: 20px;
+      border: 1px solid rgba(99,102,241,0.2);
+    }
+    .why-item h3 { color: #60a5fa; margin-bottom: 20px; font-size: 1.4rem; }
+    .why-item p { color: #94a3b8; font-size: 1.05rem; }
+    
+    .cta {
+      background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.2));
+      padding: 120px 40px;
+      text-align: center;
+    }
+    .cta h2 { font-size: 2.8rem; margin-bottom: 30px; }
+    .cta p { color: #94a3b8; max-width: 650px; margin: 0 auto 50px; font-size: 1.3rem; }
     
     footer {
       background: #020617;
-      padding: 50px 40px;
+      padding: 60px 40px;
       text-align: center;
       color: #64748b;
       border-top: 1px solid rgba(99,102,241,0.2);
     }
+    
+    @media (max-width: 768px) {
+      .hero { padding: 60px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .products-container { grid-template-columns: 1fr; }
+      .product-card { padding: 35px 25px; }
+    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <a href="index.html">← Back to ClawForge Home</a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>You're Not Overwhelmed Because of Work.<br>You're Overwhelmed Because Nothing Is Automated.</h1>
+      <p class="hero-subtitle">We install OpenClaw systems that run your operations for you.</p>
+      <p class="hero-text">Most businesses don't need more staff. They need systems. AI tools don't give you power. Systems do.</p>
+      <a href="#products" class="btn btn-primary">Get a ClawCast Tool →</a>
+      <a href="mailto:kofiadmn@agentmail.to" class="btn btn-secondary">Talk to ClawForge</a>
+    </div>
+  </section>
+  
+  <div class="trust-bar">
+    <p><strong>ClawForge Systems</strong> | AI-Powered Automation | Built for the Caribbean. Ready for the World.</p>
   </div>
   
-  <section class="hero">
-    <h1>Never Run Out of Questions Again</h1>
-    <p class="hero-subtitle">Turn any topic into a full interview, talking points, and broadcast-ready content in minutes.</p>
-    <div class="price-tag">$27 <span>one-time</span></div>
-    <br>
-    <a href="#buy" class="btn-buy">Get Instant Access →</a>
+  <section class="problem">
+    <h2>Sound Familiar?</h2>
+    <ul class="problem-list">
+      <li>Every task, decision, and follow-up still runs through you</li>
+      <li>You're firefighting instead of building</li>
+      <li>Your "team" is you, doing everything manually</li>
+      <li>You know AI could help but don't know how to systematize it</li>
+      <li>You're working 12-hour days but not moving forward</li>
+    </ul>
+    <p class="problem-cta"><strong>We fix that.</strong></p>
   </section>
   
-  <section class="section">
-    <h2>Sound Familiar?</h2>
-    <div class="problem-box">
-      <h3>The Problem</h3>
-      <ul>
-        <li>You're about to go live and don't know what to ask</li>
-        <li>Your questions are generic and get generic answers</li>
-        <li>You freeze when the guest goes off-script</li>
-        <li>You spend 2 hours prepping for a 30-minute interview</li>
-      </ul>
+  <section class="solution" id=
+
+Markup
+
+
+"products">
+    <div class="solution-header">
+      <h2>Start With a Tool. Build a System.</h2>
+      <p>These aren't just products. They're your entry point into the ClawForge ecosystem.</p>
     </div>
     
-    <div class="solution-box">
-      <h3>The Solution</h3>
-      <p>ClawCast Starter is a plug-and-play interview system. Input your topic. Get structured questions, 5W breakdowns, and clean outputs you can use immediately.</p>
+    <div class="products-container">
+      <div class="product-card">
+
+Markup
+
+
+<span class="product-badge">START HERE</span>
+        <h3>ClawCast Quick Interview Generator</h3>
+        <p class="product-desc">Never run out of questions again. Turn any topic into a full interview in minutes.</p>
+        <ul class="product-features">
+          <li>Instant question generator</li>
+          <li>5W Breakdown System</li>
+          <li>Topic briefing engine</li>
+          <li>Clean, structured outputs</li>
+        </ul>
+        <div class="product-price">$27 <span>one-time</span></div>
+        <a href="clawcast-starter.html" class="btn btn-primary btn-block">Get ClawCast Starter →</a>
+      </div>
+      
+      <div class="product-card">
+        <span class="product-badge" style="background: rgba(139,92,246,0.2); color: #a78bfa;">MOST POPULAR</span>
+        <h3>ClawCast Pro — Full Interview Intelligence</h3>
+        <p class="product-desc">Everything in Starter + advanced angles, follow-up chains, and show builder.</p>
+        <ul class="product-features">
+          <li>Everything in Starter</li>
+          <li>Advanced questioning angles</li>
+          <li>Follow-up chains</li>
+          <li>Pressure Mode</li>
+        </ul>
+        <div class="product-price">$47 <span>one-time</span></div>
+        <a href="clawcast-pro.html" class="btn btn-primary btn-block">Upgrade to Pro →</a>
+      </div>
+      
+      <div class="product-card">
+        <span class="product-badge" style="background: rgba(16,185,129,0.2); color: #34d399;">FOR CREATORS</span>
+        <h3>AI Avatar Pack</h3>
+        <p class="product-desc">Give your AI a voice that actually sounds like your brand.</p>
+        <ul class="product-features">
+          <li>5 Core Avatars</li>
+          <li>Plug-and-play prompts</li>
+          <li>Customization guide</li>
+          <li>Stop sounding like "generic AI"</li>
+        </ul>
+        <div class="product-price">$27 <span>one-time</span></div>
+        <a href="ai-avatar-pack.html" class="btn btn-primary btn-block">Get AI Avatar Pack →</a>
+      </div>
     </div>
   </section>
   
-  <section class="section">
-    <h2>What You Get</h2>
-    <div class="includes-box">
-      <h3>📦 ClawCast Quick Interview Generator (Starter)</h3>
-      <ul>
-        <li><strong>5W Breakdown System</strong> — Never miss the basics</li>
-        <li><strong>Instant Question Generator</strong> — Input topic + guest, get sharp questions</li>
-        <li><strong>6 Question Categories</strong> — Opening, Story, Challenge, Solution, Result, Future</li>
-        <li><strong>AI Prompt for Custom Questions</strong> — Generate unlimited tailored questions</li>
-        <li><strong>Quick Prep Checklist</strong> — 6-point system for interview readiness</li>
-        <li><strong>Emergency Questions</strong> — 3 questions when you have 30 seconds to prep</li>
-      </ul>
+  <section class="why">
+    <h2>Why ClawForge?</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>🎯 Systems, Not Just Tools</h3>
+        <p>We don't sell you AI access. We build you execution systems.</p>
+      </div>
+      <div class="why-item">
+        <h3>⚡ Built for Speed</h3>
+        <p>Every product saves you hours immediately. No learning curve.</p>
+      </div>
+      <div class="why-item">
+        <h3>🌍 Caribbean-Born</h3>
+        <p>Built in Antigua for entrepreneurs worldwide.</p>
+      </div>
+      <div class="why-item">
+        <h3>🚀 Scale-Ready</h3>
+        <p>Start with $27. Grow into full automation.</p>
+      </div>
     </div>
   </section>
   
-  <section class="final-cta" id="buy">
-    <h2>Stop Winging It. Start Preparing Smart.</h2>
-    <p>The difference between a good interview and a powerful one is preparation.</p>
-    <div class="price-tag">$27 <span>one-time</span></div>
-    <br>
-    <a href="#" class="btn-buy">Get ClawCast Starter →</a>
+  <section class="cta">
+    <h2>Build. Automate. Scale.</h2>
+    <p>Doing everything manually is costly, slow, and exhausting. The choice is yours.</p>
+    <a href="#products" class="btn btn-primary">Choose Your Tool →</a>
   </section>
   
   <footer>
