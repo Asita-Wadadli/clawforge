@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Avatar Pack - Give Your AI Your Voice | ClawForge</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #050510; color: #fff; line-height: 1.6; }
+    
+    .header {
+      background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(59,130,246,0.2));
+      padding: 25px 40px;
+      border-bottom: 1px solid rgba(99,102,241,0.3);
+    }
+    .header a { color: #34d399; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    
+    .hero {
+      background: linear-gradient(180deg, rgba(16,185,129,0.15) 0%, #050510 100%);
+      padding: 100px 40px 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, #fff, #6ee7b7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #10b981, #059669);
+      padding: 20px 50px;
+      border-radius: 50px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 30px 0;
+    }
+    .price-tag span { font-size: 1.1rem; font-weight: 400; opacity: 0.9; }
+    
+    .btn-buy {
+      display: inline-block;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: white;
+      padding: 22px 60px;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 30px 0;
+    }
+    
+    .section {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+    .section h2 { font-size: 2.4rem; margin-bottom: 40px; color: #fff; }
+    .section p { color: #cbd5e1; font-size: 1.15rem; margin-bottom: 25px; line-height: 1.7; }
+    
+    .avatars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .avatar-card {
+      background: linear-gradient(145deg, rgba(16,185,129,0.1), rgba(59,130,246,0.1));
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: 16px;
+      padding: 35px;
+    }
+    .avatar-card h4 { color: #34d399; font-size: 1.3rem; margin-bottom: 15px; }
+    .avatar-card p { color: #94a3b8; font-size: 1rem; line-height: 1.6; margin: 0; }
+    .avatar-card .use-for {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(16,185,129,0.2);
+      color: #6ee7b7;
+      font-size: 0.9rem;
+    }
+    
+    .includes-box {
+      background: linear-gradient(145deg, rgba(16,185,129,0.1), rgba(59,130,246,0.1));
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: 20px;
+      padding: 50px;
+      margin: 50px 0;
+    }
+    .includes-box h3 { font-size: 1.6rem; margin-bottom: 30px; color: #fff; }
+    .includes-box ul { list-style: none; }
+    .includes-box li {
+      padding: 18px 0;
+      padding-left: 45px;
+      position: relative;
+      color: #cbd5e1;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(16,185,129,0.2);
+    }
+    .includes-box li::before { content: '✓'; position: absolute; left: 0; color: #34d399; font-weight: bold; font-size: 1.4rem; }
+    .includes-box li strong { color: #fff; }
+    
+    .final-cta {
+      background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(59,130,246,
+
+copy
+
+
+0.
+
+CSS
+
+
+2));
+      padding: 100px 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+Markup
+
+
+.final-cta h2 { font-size: 2.4rem; margin-bottom: 25px; }
+    .final-cta p { color: #94a3b8; max-width: 650px; margin: 0 auto 40px; font-size: 1.2rem; }
+    
+    footer {
+      background: #020617;
+      padding: 50px 40px;
+      text-align: center;
+      color: #64748b;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">← Back to ClawForge Home</a>
+  </div>
+  
+  <section class="hero">
+    <h1>Give Your AI a Voice That Actually Sounds Like You</h1>
+    <p class="hero-subtitle">Stop sounding like "generic AI." Plug-and-play brand avatars and prompts so your AI writes, speaks, and creates in your true voice.</p>
+    <div class="price-tag">$27 <span>one-time</span></div>
+    <br>
+    <a href="#buy" class="btn-buy">Get AI Avatar Pack →</a>
+  </section>
+  
+  <section class="section">
+    <h2>5 Core Avatars Included</h2>
+    <div class="avatars-grid">
+      <div class="avatar-card">
+        <h4>🎯 Brand Voice</h4>
+        <p>Your default public voice. Direct, clear, confident. For social posts, announcements, and brand messaging.</p>
+        <div class="use-for">Use for: General content, social media, email newsletters</div>
+      </div>
+      <div class="avatar-card">
+        <h4>📚 The Teacher</h4>
+        <p>Patient, methodical, uses analogies. Explains complex topics without talking down.</p>
+        <div class="use-for">Use for: How-tos, tutorials, educational content</div>
+      </div>
+      <div class="avatar-card">
+        <h4>📖 The Storyteller</h4>
+        <p>Narrative-driven, emotionally resonant, creates vivid scenes. Finds the human angle.</p>
+        <div class="use-for">Use for: Case studies, origin stories, brand narratives</div>
+      </div>
+      <div class="avatar-card">
+        <h4>💼 The Sales Closer</h4>
+        <p>Benefit-focused, addresses objections, creates urgency. Speaks to desires and pain points.</p>
+        <div class="use-for">Use for: Sales pages, pitch emails, offer announcements</div>
+      </div>
+      <div class="avatar-card">
+        <h4>🤝 Support Helper</h4>
+        <p>Warm, patient, solution-focused. Validates frustration while guiding to answers.</p>
+        <div class="use-for">Use for: FAQ responses, customer service, troubleshooting</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <h2>What You Get</h2>
+    <div class="includes-box">
+      <h3>🎭 AI Avatar Pack - Complete System</h3>
+      <ul>
+        <li><strong>5 Complete Avatars</strong> — Full personality profiles, tone rules, do/don't guidelines</li>
+        <li><strong>Wrapper Prompts</strong> — Copy-paste prompts for each avatar, ready to use</li>
+        <li><strong>Voice Customization Guide</strong> — Adapt avatars to your specific brand</li>
+        <li><strong>Usage Matrix</strong> — Which avatar for which content type</li>
+        <li><strong>Example Outputs</strong> — See each avatar in action</li>
+        <li><strong>PDF + Editable Formats</strong> — Use anywhere, customize as needed</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class="final-cta" id="buy">
+    <h2>Stop Sounding Like Generic AI. Start Sounding Like You.</h2>
+    <p>Your AI should amplify your voice, not replace it with corporate robot speak.</p>
+    <div class="price-tag"
+
+Markup
+
+
+>$27 <span>one-time</span></div>
+    <br>
+    <a href="#" class="btn-buy">Get AI Avatar Pack →</a>
+  </section>
+  
+  <footer>
+    <p>© 2026 ClawForge Systems. All rights reserved.</p>
+  </footer>
+</body>
+</html>
