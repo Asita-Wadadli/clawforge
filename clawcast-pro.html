@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClawCast Pro - Full Interview Intelligence System | ClawForge</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #050510; color: #fff; line-height: 1.6; }
+    
+    .header {
+      background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(59,130,246,0.2));
+      padding: 25px 40px;
+      border-bottom: 1px solid rgba(99,102,241,0.3);
+    }
+    .header a { color: #a78bfa; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    
+    .hero {
+      background: linear-gradient(180deg, rgba(139,92,246,0.15) 0%, #050510 100%);
+      padding: 100px 40px 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, #fff, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      padding: 20px 50px;
+      border-radius: 50px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 30px 0;
+    }
+    .price-tag span { font-size: 1.1rem; font-weight: 400; opacity: 0.9; }
+    
+    .btn-buy {
+      display: inline-block;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      padding: 22px 60px;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 30px 0;
+    }
+    
+    .section {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+    .section h2 { font-size: 2.4rem; margin-bottom: 40px; color: #fff; }
+    .section p { color: #cbd5e1; font-size: 1.15rem; margin-bottom: 25px; line-height: 1.7; }
+    
+    .includes-box {
+      background: linear-gradient(145deg, rgba(139,92,246,0.1), rgba(59,130,246,0.1));
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 20px;
+      padding: 50px;
+      margin: 50px 0;
+    }
+    .includes-box h3 { font-size: 1.6rem; margin-bottom: 30px; color: #fff; }
+    .includes-box ul { list-style: none; }
+    .includes-box li {
+      padding: 18px 0;
+      padding-left: 45px;
+      position: relative;
+      color: #cbd5e1;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+    }
+    .includes-box li::before { content: '✓'; position: absolute; left: 0; color: #a78bfa; font-weight: bold; font-size: 1.4rem; }
+    .includes-box li strong { color: #fff; }
+    
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .comparison-box {
+      padding: 35px;
+      border-radius: 16px;
+    }
+    .comparison-starter {
+      background: rgba(30,41,59,0.4);
+      border: 1px solid rgba(99,102,241,0.2);
+    }
+    .comparison-pro {
+      background: linear-gradient(145deg, rgba(139,92,246,0.2), rgba(59,130,246,0.2));
+      border: 2px solid rgba(139,92,246,0.4);
+    }
+    .comparison-box h4 { font-size: 1.3rem; margin-bottom: 20px; }
+    .comparison-starter h4 { color: #60a5fa; }
+    .comparison-pro h4 { color: #a78bfa; }
+    .comparison-box ul { list-style: none; }
+    .comparison-box li {
+      padding: 10px 0;
+      color: #94a3b8;
+      font-size: 0.95rem;
+      padding-left: 25px;
+
+CSS
+
+
+    position: relative;
+    }
+
+Markup
+
+
+.comparison-box li::before { content: '✓'; position: absolute; left: 0; color: #34d399; }
+    
+    .final-cta {
+      background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(59,130,246,0.2));
+      padding: 100px 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .final-cta h2 { font-size: 2.4rem; margin-bottom: 25px; }
+    .final-cta p { color: #94a3b8; max-width: 650px; margin: 0 auto 40px; font-size: 1.2rem; }
+    
+    footer {
+      background: #020617;
+      padding: 50px 40px;
+      text-align: center;
+      color: #64748b;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .comparison { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">← Back to ClawForge Home</a>
+  </div>
+  
+  <section class="hero">
+    <h1>From "Winging It" to Full Interview Intelligence</h1>
+    <p class="hero-subtitle">Everything in ClawCast Starter, plus the real weapons for serious interviewers.</p>
+    <div class="price-tag">$47 <span>one-time</span></div>
+    <br>
+    <a href="#buy" class="btn-buy">Upgrade to Pro →</a>
+  </section>
+  
+  <section class="section">
+    <h2>What Makes Pro Different</h2>
+    <div class="comparison">
+      <div class="comparison-box comparison-starter">
+        <h4>Starter ($27)</h4>
+        <ul>
+          <li>5W Breakdown</li>
+          <li>Basic question templates</li>
+          <li>Quick prep checklist</li>
+          <li>Emergency questions</li>
+        </ul>
+      </div>
+      <div class="comparison-box comparison-pro">
+        <h4>Pro ($47) — Everything Above, Plus:</h4>
+        <ul>
+          <li>Advanced questioning angles</li>
+          <li>Follow-up chains (If X → ask Y)</li>
+          <li>Pressure Mode for accountability</li>
+          <li>Full show builder</li>
+          <li>Deep analysis & repurposing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <h2>What You Get</h2>
+    <div class="includes-box">
+      <h3>🎯 ClawCast Pro — Full Interview Intelligence System</h3>
+      <ul>
+        <li><strong>Everything in Starter</strong> — All the basics, supercharged</li>
+        <li><strong>5 Advanced Questioning Angles</strong> — Soft, Hard, Controversial, Clarifying, Reflective</li>
+        <li><strong>Follow-Up Chains</strong> — "If they say X → ask Y" sequences for any response</li>
+        <li><strong>Pressure Mode</strong> — Accountability questions for tough interviews</li>
+        <li><strong>Full Show Builder</strong> — Complete structure for radio, TV, or podcast</li>
+        <li><strong>Deep Analysis Output</strong> — Extract themes, talking points, and repurposable content</li>
+        <li><strong>Content Repurposing Guide</strong> — Turn one interview into 10+ pieces of content</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class="final-cta" id="buy">
+    <h2>Stop Being Good. Start Being Unforgettable.</h2>
+    <p>The difference between a forgettable interview and one that gets shared, quoted, and remembered? Preparation and technique.</p>
+    <div class="price-tag">$47 <span>one-time</span></div>
+    <br>
+    <a href="#" class="btn-buy">Get ClawCast Pro →</a>
+  </section>
+  
+  <footer>
+    <p>© 2026 ClawForge Systems. All rights reserve
+
+Markup
+
+
+d.</p>
+  </footer>
+</body>
+</html>
