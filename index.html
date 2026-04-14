@@ -1,64 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClawForge Systems – Build. Automate. Scale.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClawCast Starter - Never Run Out of Questions Again | ClawForge</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a1a; color: #fff; line-height: 1.6; }
-    .hero { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #1e1b4b 100%); padding: 80px 20px; text-align: center; }
-    .hero h1 { font-size: 2.5rem; max-width: 900px; margin: 0 auto 20px; line-height: 1.2; }
-    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: #cbd5e1; }
-    .btn { display: inline-block; padding: 15px 30px; margin: 10px; border-radius: 50px; text-decoration: none; font-weight: bold; }
-    .btn-primary { background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; }
-    .btn-secondary { border: 2px solid #6366f1; color: #e0e7ff; }
-    .section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-    .section h2 { font-size: 2rem; margin-bottom: 40px; text-align: center; }
-    .offers { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .offer { background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 30px; }
-    .offer h3 { color: #60a5fa; margin-bottom: 15px; font-size: 1.3rem; }
-    .offer .price { color: #a78bfa; font-size: 1.5rem; font-weight: bold; margin: 15px 0; }
-    .offer p { color: #cbd5e1; margin-bottom: 20px; }
-    footer { text-align: center; padding: 40px; color: #64748b; border-top: 1px solid rgba(99, 102, 241, 0.2); }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #050510; color: #fff; line-height: 1.6; }
+    
+    .header {
+      background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.2));
+      padding: 25px 40px;
+      border-bottom: 1px solid rgba(99,102,241,0.3);
+    }
+    .header a { color: #60a5fa; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    
+    .hero {
+      background: linear-gradient(180deg, rgba(59,130,246,0.15) 0%, #050510 100%);
+      padding: 100px 40px 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, #fff, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      padding: 20px 50px;
+      border-radius: 50px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 30px 0;
+    }
+    .price-tag span { font-size: 1.1rem; font-weight: 400; opacity: 0.9; }
+    
+    .btn-buy {
+      display: inline-block;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      padding: 22px 60px;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 30px 0;
+    }
+    
+    .section {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+    .section h2 { font-size: 2.4rem; margin-bottom: 40px; color: #fff; }
+    .section p { color: #cbd5e1; font-size: 1.15rem; margin-bottom: 25px; line-height: 1.7; }
+    
+    .problem-box {
+      background: rgba(30,41,59,0.6);
+      border-left: 4px solid #ef4444;
+      padding: 40px;
+      border-radius: 0 16px 16px 0;
+      margin: 40px 0;
+    }
+    .problem-box h3 { color: #ef4444; margin-bottom: 25px; font-size: 1.4rem; }
+    .problem-box ul { list-style: none; }
+    .problem-box li {
+      padding: 15px 0;
+      color: #cbd5e1;
+      font-size: 1.1rem;
+      padding-left: 40px;
+      position: relative;
+      border-bottom: 1px solid rgba(239,68,68,0.2);
+    }
+    .problem-box li::before { content: '✗'; position: absolute; left: 0; color: #ef4444; font-size: 1.3rem; }
+    
+    .solution-box {
+      background: rgba(30,41,59,0.6);
+      border-left: 4px solid #10b981;
+      padding: 40px;
+      border-radius: 0 16px 16px 0;
+      margin: 40px 0;
+    }
+    .solution-box h3 { color: #10b981; margin-bottom: 20px; font-size: 1.4rem; }
+    
+    .includes-box {
+      background: linear-gradient(145deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1));
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 20px;
+      padding: 50px;
+      margin: 50px 0;
+    }
+    .includes-box h3 { font-size: 1.6rem; margin-bottom: 30px; color: #fff; }
+    .includes-box ul { list-style: none; }
+    .includes-box li {
+      padding: 18px 0;
+      padding-left: 45px;
+      position: relative;
+      color: #cbd5e1;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+    }
+    .includes-box li::before { content: '✓'; position: absolute; le
+
+copy
+
+
+ft
+
+CSS
+
+
+: 0; color: #10b981; font-weight: bold; font-size: 1.4rem; }
+    .includes-box li strong { color: #fff; }
+
+Markup
+
+
+.final-cta {
+      background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.2));
+      padding: 100px 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .final-cta h2 { font-size: 2.4rem; margin-bottom: 25px; }
+    .final-cta p { color: #94a3b8; max-width: 650px; margin: 0 auto 40px; font-size: 1.2rem; }
+    
+    footer {
+      background: #020617;
+      padding: 50px 40px;
+      text-align: center;
+      color: #64748b;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>You're not overwhelmed because of work. You're overwhelmed because nothing is automated.</h1>
-    <p>We install OpenClaw systems that run your operations for you. Welcome to ClawForge Systems.</p>
-    <a href="#offers" class="btn btn-primary">Get a ClawCast Tool</a>
-    <a href="mailto:kofiadmn@agentmail.to" class="btn btn-secondary">Talk to ClawForge</a>
-  </header>
-
-  <main>
-    <section class="section" id="offers">
-      <h2>Featured Tools & Offers</h2>
-      <div class="offers">
-        <div class="offer">
-          <h3>ClawCast Quick Interview Generator (Starter)</h3>
-          <p>Never Run Out of Questions Again. Turn any topic into a full interview in minutes.</p>
-          <div class="price">$27</div>
-          <a href="offers.html#clawcast-starter" class="btn btn-primary">Get ClawCast Starter</a>
-        </div>
-
-        <div class="offer">
-          <h3>ClawCast Pro – Full Interview Intelligence System</h3>
-          <p>Everything in Starter + advanced angles, follow-up chains, and show builder.</p>
-          <div class="price">$47</div>
-          <a href="offers.html#clawcast-pro" class="btn btn-primary">Upgrade to Pro</a>
-        </div>
-
-        <div class="offer">
-          <h3>AI Avatar Pack</h3>
-          <p>Give your AI a brain that actually sounds like your brand.</p>
-          <div class="price">$27</div>
-          <a href="offers.html#ai-avatar-pack" class="btn btn-primary">Get AI Avatar Pack</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <div class="header">
+    <a href="index.html">← Back to ClawForge Home</a>
+  </div>
+  
+  <section class="hero">
+    <h1>Never Run Out of Questions Again</h1>
+    <p class="hero-subtitle">Turn any topic into a full interview, talking points, and broadcast-ready content in minutes.</p>
+    <div class="price-tag">$27 <span>one-time</span></div>
+    <br>
+    <a href="#buy" class="btn-buy">Get Instant Access →</a>
+  </section>
+  
+  <section class="section">
+    <h2>Sound Familiar?</h2>
+    <div class="problem-box">
+      <h3>The Problem</h3>
+      <ul>
+        <li>You're about to go live and don't know what to ask</li>
+        <li>Your questions are generic and get generic answers</li>
+        <li>You freeze when the guest goes off-script</li>
+        <li>You spend 2 hours prepping for a 30-minute interview</li>
+      </ul>
+    </div>
+    
+    <div class="solution-box">
+      <h3>The Solution</h3>
+      <p>ClawCast Starter is a plug-and-play interview system. Input your topic. Get structured questions, 5W breakdowns, and clean outputs you can use immediately.</p>
+    </div>
+  </section>
+  
+  <section class="section">
+    <h2>What You Get</h2>
+    <div class="includes-box">
+      <h3>📦 ClawCast Quick Interview Generator (Starter)</h3>
+      <ul>
+        <li><strong>5W Breakdown System</strong> — Never miss the basics</li>
+        <li><strong>Instant Question Generator</strong> — Input topic + guest, get sharp questions</li>
+        <li><strong>6 Question Categories</strong> — Opening, Story, Challenge, Solution, Result, Future</li>
+        <li><strong>AI Prompt for Custom Questions</strong> — Generate unlimited tailored questions</li>
+        <li><strong>Quick Prep Checklist</strong> — 6-point system for interview readiness</li>
+        <li><strong>Emergency Questions</strong> — 3 questions when you have 30 seconds to prep</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class="final-cta" id="buy">
+    <h2>Stop Winging It. Start Preparing Smart.</h2>
+    <p>The difference between a good interview and a powerful one is preparation.</p>
+    <div class="price-tag">$27 <span>one-time</span></div>
+    <br>
+    <a href="#" class="btn-buy">Get ClawCast Starter →</a>
+  </section>
+  
   <footer>
     <p>© 2026 ClawForge Systems. All rights reserved.</p>
   </footer>
